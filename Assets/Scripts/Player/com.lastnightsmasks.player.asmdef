@@ -1,0 +1,16 @@
+{
+    "name": "com.lastnightsmasks.player",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7fed97b195f0c48938f5d179733b3f85"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
