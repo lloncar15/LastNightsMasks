@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8401254500365245250}
+  - component: {fileID: 7431163287414695594}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -32,6 +33,23 @@ Transform:
   - {fileID: 2591146528671445821}
   m_Father: {fileID: 4619217967752219647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7431163287414695594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115699934925592619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b267fe7f3c4835a58380c11c9d92fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.player::LastNightsMasks.Player.CameraZoomController
+  playerCamera: {fileID: 8354387622068796585}
+  defaultFOV: 60
+  zoomedFOV: 40
+  zoomDuration: 0.3
+  zoomEase: 7
 --- !u!1 &634204738307482411
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.player::LastNightsMasks.Player.PlayerInteractionController
   playerCamera: {fileID: 8354387622068796585}
   interactPromptUI: {fileID: 0}
+  cameraZoomController: {fileID: 0}
   maxLookDistance: 10
   interactableLayer:
     serializedVersion: 2

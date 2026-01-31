@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using LastNightsMasks.Input;
 using UnityEngine;
@@ -9,11 +10,16 @@ namespace LastNightsMasks.Interactable {
         private bool _isBeingLookedAt;
         private bool _canBeInteracted;
 
+        public static Action<Transform> InteractedWithObject;
+        public static Action FinishedInteractingWithObject;
+
         public void Interact() {
             if (!_isBeingLookedAt)
                 return;
             
             InputController.Instance.SwitchToInputMode(InputMode.Interact);
+            
+            InteractedWithObject?.Invoke(transform);
 
             StartCoroutine(Test());
         }
@@ -22,6 +28,7 @@ namespace LastNightsMasks.Interactable {
             _hasAlreadyBeenInteracted = true;
             _isBeingLookedAt = false;
             yield return new WaitForSeconds(3f);
+            FinishedInteractingWithObject?.Invoke();
             InputController.Instance.SwitchToInputMode(InputMode.General);
         }
         

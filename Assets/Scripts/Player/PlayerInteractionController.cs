@@ -10,6 +10,7 @@ namespace LastNightsMasks.Player {
         [Header("References")]
         [SerializeField] private Camera playerCamera;
         [SerializeField] private GameObject interactPromptUI;
+        [SerializeField] private CameraZoomController cameraZoomController;
 
         [Header("Settings")] 
         [SerializeField] private float maxLookDistance = 10f;
