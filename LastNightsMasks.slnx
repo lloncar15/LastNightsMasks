@@ -1,0 +1,7 @@
+﻿<Solution>
+  <Project Path="com.lastnightsmasks.interactable.csproj" />
+  <Project Path="Assembly-CSharp-firstpass.csproj" />
+  <Project Path="com.lastnightsmasks.input.csproj" />
+  <Project Path="com.lastnightsmasks.player.csproj" />
+  <Project Path="com.lastnightsmasks.ui.csproj" />
+</Solution>
