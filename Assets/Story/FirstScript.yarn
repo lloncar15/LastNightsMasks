@@ -1,21 +1,77 @@
-﻿title: Start
-tags:
+﻿title: Bebe
+position: -17,193
 ---
-Narrator: Oh, hello!
-    -> Hi, where am I?
-        Narrator: You're in Unity!
-            -> Oh.
-                <<jump Oh>>
-            -> How did I get here?
-                <<jump Unity>>
+//Bebe comes to the player every 3 mins, and asks this question
+Bebe: Have you seen my rabbit?
+-> Yes
+    Bebe: Are you playing with me?
+    //Bebe walks away
+-> No
+    Bebe: Can you find me if you'd see my rabbit?
+    -> Okay
+    -> Maybe
+    -> No
+    -> Look closer
+//Bebe walks away
+//This interraction activates the rabbit trinket's item which is an easter egg
 ===
 
-title: Oh
+title: Magician
+position: 95,3
 ---
-Narrator: Yeah, fun, right?
+Magician: Urgh... My head. Last night's party was mad. 
+-> Yeah, it was something. Have you seen my keys?
+    Magician: What do you mean keys? 
+-> Like keys... to open doors? 
+    Magician: I'm not sure. 
+    Magician: Do you want to play a game?
+    -> Yes
+        Magician: Go look under the bed. I have a surprise for you.
+    //A magician hat is spawned when the player touches the bed
+    -> No
+    //Magician walks away 
 ===
 
-title: Unity
+title: Ghosty
+position: -240,3
 ---
-Narrator: Someone read the Beginner's Guide!
+Ghosty: I feel so alive today.
+-> You look good. What's your secret?
+    Ghosty: I eat a lot of veggies. Like A LOT.
+     -> Sounds tripy.
+-> I need to go home. Have you seen my keys?
+    Ghosty: Do I look like a lost and found?
+    //Ghosty walks away
 ===
+
+title: Dolores
+position: 146,-221
+---
+-> Wow, Dolores. You survived last night!
+Dolores: Do I look like a bird to you?..
+Dolores: Anyways, always same.. All that aside why do you always call me when you're high?
+    -> I didn't call you. You were here when I arrived yesterday.
+    Dolores: Are you high? Do you even listen what I say?
+    -> Can you just tell me where my keys are?
+    Dolores: Don't worry I'll help you find your keys. Come here. 
+    //Dolores goes back a little if possible
+    Dolores: Let's talk here. I don't trust Bebe. Who'd bring their rabbit to a private house party? Trippy.
+    Dolores: Okay, take a deep breath now. When was the last time you've seen your keys?
+    -> Take a deep breath
+    -> I saw it in the bag
+ ===
+
+
+
+    
+    
+   
+
+
+
+
+
+
+
+
+
