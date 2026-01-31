@@ -12,22 +12,27 @@ namespace LastNightsMasks.Input {
         public Vector2 LookInput {get; private set;}
 
         public event Action OnInteractPressed;
+        public event Action OnInteraction;
         public event Action OnSettingsPressed;
+
+        private bool _isUIInputEnabled = true;
 
         private void Awake() {
             _inputActions = new PlayerInputActions();
         }
 
         private void OnEnable() {
-            _inputActions.General.Enable();
+            SwitchToInputMode(InputMode.General);
             _inputActions.UI.Enable();
             _inputActions.General.Interact.performed += HandleGeneralInteract;
+            _inputActions.Interact.Interact.performed += HandleInteracted;
             _inputActions.UI.Settings.performed += HandleSettings;
         }
 
         private void OnDisable() {
             _inputActions.General.Interact.performed -= HandleGeneralInteract;
-            _inputActions.UI.Settings.performed += HandleSettings;
+            _inputActions.Interact.Interact.performed -= HandleInteracted;
+            _inputActions.UI.Settings.performed -= HandleSettings;
             _inputActions.Disable();
         }
 
@@ -42,7 +47,6 @@ namespace LastNightsMasks.Input {
                     break;
                 }
             }
-            
         }
 
         #region General Inputs
@@ -51,10 +55,10 @@ namespace LastNightsMasks.Input {
             MoveInput = _inputActions.General.Move.ReadValue<Vector2>();
             LookInput = _inputActions.General.Look.ReadValue<Vector2>();
         }
+        
         /// <summary>
         /// Fire of the Interact pressed event if the General input mode is enabled
         /// </summary>
-        /// <param name="context"></param>
         private void HandleGeneralInteract(InputAction.CallbackContext context) {
             if (currentInputMode != InputMode.General)
                 return;
@@ -62,10 +66,37 @@ namespace LastNightsMasks.Input {
             OnInteractPressed?.Invoke();
         }
         
+        public void DisableGeneralInput() {
+            _inputActions.General.Disable();
+            MoveInput = Vector2.zero;
+            LookInput = Vector2.zero;
+        }
+
+        public void EnableGeneralInput() {
+            _inputActions.General.Enable();
+        }
+
+        #endregion
+        
+        #region UI Inputs
+        
         private void HandleSettings(InputAction.CallbackContext context) {
+            if (!_isUIInputEnabled)
+                return;
+            
             OnSettingsPressed?.Invoke();
         }
 
+        public void EnableUIInputs() {
+            _isUIInputEnabled = true;
+            _inputActions.UI.Enable();
+        }
+
+        public void DisableUIInputs() {
+            _isUIInputEnabled = false;
+            _inputActions.UI.Disable();
+        }
+        
         #endregion
 
         #region Interact Inputs
@@ -74,28 +105,45 @@ namespace LastNightsMasks.Input {
             
         }
 
+        private void HandleInteracted(InputAction.CallbackContext context) {
+            if (currentInputMode != InputMode.Interact)
+                return;
+            
+            OnInteraction?.Invoke();
+        }
+
+        public void EnableInteractInputs() {
+            _inputActions.Interact.Enable();
+        }
+
+        public void DisableInteractInputs() {
+            _inputActions.Interact.Disable();
+        }
+
         #endregion
         
-        public void SwitchInputMode(InputMode mode) {
-            if (currentInputMode == InputMode.General) {
-                
+        public void SwitchToInputMode(InputMode mode) {
+            switch (mode) {
+                case InputMode.General: {
+                    EnableGeneralInput();
+                    DisableInteractInputs();
+                    SwitchCursorLockMode(CursorLockMode.Locked);
+                    break;
+                }
+                case InputMode.Interact: {
+                    DisableGeneralInput();
+                    EnableInteractInputs();
+                    SwitchCursorLockMode(CursorLockMode.None);
+                    break;
+                }
             }
-            else {
-                
-            }
+
+            currentInputMode = mode;
         }
 
-        /// <summary>
-        /// Call this to disable all player input during interactions
-        /// </summary>
-        public void DisablePlayerInput() {
-            _inputActions.General.Disable();
-            MoveInput = Vector2.zero;
-            LookInput = Vector2.zero;
-        }
-
-        public void EnablePlayerInput() {
-            _inputActions.General.Enable();
+        private void SwitchCursorLockMode(CursorLockMode mode) {
+            Cursor.lockState = mode;
+            Cursor.visible = mode != CursorLockMode.Locked;
         }
     }
 

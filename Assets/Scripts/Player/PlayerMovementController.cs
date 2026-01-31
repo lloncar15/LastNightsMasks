@@ -1,4 +1,3 @@
-using System;
 using LastNightsMasks.Input;
 using UnityEngine;
 
@@ -16,8 +15,6 @@ namespace LastNightsMasks.Player {
 
         private void Awake() {
             _characterController = GetComponent<CharacterController>();
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
 
         private void Update() {

@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 4619217967752219647}
   - component: {fileID: 3854722399892650873}
   - component: {fileID: 8055073818046895616}
+  - component: {fileID: 1540898699380637114}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -244,6 +245,19 @@ MonoBehaviour:
   inputController: {fileID: 0}
   cameraHolder: {fileID: 8401254500365245250}
   playerConfig: {fileID: 11400000, guid: e04ca3e1bb29c4d179593860b34a9fe2, type: 2}
+--- !u!114 &1540898699380637114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7109354299647852990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2250b17b25748599d1f21c09fc7b259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.player::LastNightsMasks.Player.PlayerInteractionController
+  inputController: {fileID: 0}
 --- !u!1 &8993339288850932476
 GameObject:
   m_ObjectHideFlags: 0
