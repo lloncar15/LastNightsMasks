@@ -1244,6 +1244,7 @@ Transform:
   - {fileID: 1403063492}
   - {fileID: 90996286}
   - {fileID: 1733704123}
+  - {fileID: 1241763796}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940480589
@@ -1549,7 +1550,7 @@ GameObject:
   - component: {fileID: 1241763795}
   - component: {fileID: 1241763797}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: LampLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1564,10 +1565,10 @@ Light:
   m_GameObject: {fileID: 1241763794}
   m_Enabled: 1
   serializedVersion: 12
-  m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Type: 2
+  m_Color: {r: 1, g: 0.73297286, b: 0.0047169924, a: 1}
+  m_Intensity: 6
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -1628,13 +1629,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241763794}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -9.79, y: 3.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_Father: {fileID: 721861291}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1241763797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2550,7 +2551,6 @@ SceneRoots:
   - {fileID: 358592467}
   - {fileID: 520517268}
   - {fileID: 1726419935}
-  - {fileID: 1241763796}
   - {fileID: 721861291}
   - {fileID: 1936312019}
   - {fileID: 1844985507741888833}
