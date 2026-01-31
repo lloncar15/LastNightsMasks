@@ -16,8 +16,28 @@ namespace LastNightsMasks.Input {
         public event Action OnSettingsPressed;
 
         private bool _isUIInputEnabled = true;
+        
+        private static InputController _instance;
+
+        public static InputController Instance {
+            get {
+                if (_instance == null) {
+                    _instance = FindAnyObjectByType<InputController>();
+                    if (_instance == null) {
+                        GameObject go = new GameObject("InputController");
+                        _instance = go.AddComponent<InputController>();
+                    }
+                }
+
+                return _instance;
+            }
+        }
 
         private void Awake() {
+            if (!Application.isPlaying)
+                return;
+
+            _instance = this;
             _inputActions = new PlayerInputActions();
         }
 

@@ -5,7 +5,6 @@ namespace LastNightsMasks.Player {
     [RequireComponent(typeof(CharacterController))]
     public class PlayerMovementController : MonoBehaviour {
         [Header("References")]
-        [SerializeField] private InputController inputController;
         [SerializeField] private Transform cameraHolder;
         [SerializeField] private PlayerConfig playerConfig;
         
@@ -23,7 +22,7 @@ namespace LastNightsMasks.Player {
         }
 
         private void HandleLook() {
-            Vector2 lookInput = inputController.LookInput;
+            Vector2 lookInput = InputController.Instance.LookInput;
             
             transform.Rotate(Vector3.up, lookInput.x * playerConfig.lookSensitivity);
             
@@ -33,7 +32,7 @@ namespace LastNightsMasks.Player {
         }
 
         private void HandleMovement() {
-            Vector2 moveInput = inputController.MoveInput;
+            Vector2 moveInput = InputController.Instance.MoveInput;
             
             Vector3 direction = transform.right * moveInput.x + transform.forward * moveInput.y;
 
