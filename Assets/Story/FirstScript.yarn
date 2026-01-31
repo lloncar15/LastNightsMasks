@@ -35,7 +35,7 @@ Magician: Urgh... My head. Last night's party was mad.
 title: Ghosty
 position: -240,3
 ---
-Ghosty: I feel so alive today.
+Ghosty: Ohh... I feel so alive today.
 -> You look good. What's your secret?
     Ghosty: I eat a lot of veggies. Like A LOT.
      -> Sounds trippy.
@@ -48,7 +48,8 @@ title: Dolores
 position: 146,-221
 ---
 -> Wow, Dolores. You survived last night!
-Dolores: Do I look like a bird to you?..
+Dolores: You saying. Do I look like a bird to you?..
+-> Uhh, I don't know.
 Dolores: Anyways, always same.. All that aside, why do you always call me when you're high?
     -> I didn't call you. You were here when I arrived yesterday.
     Dolores: Are you high? Do you even listen to what I'm saying?
