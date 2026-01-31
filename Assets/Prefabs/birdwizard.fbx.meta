@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 91a2987ce9f68c848ac6d392de903528
+guid: db8fc85f417708d4fb06fab56bc3edf7
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WizardBird
+    second: {fileID: 2100000, guid: 9db17e917727d0f43960a18b1a5b9027, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 64e98c161dc3fcc418cb0cf8ff0aa93c
+guid: a664636c10f2f404382cd39a9558dba9
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Ghost
-    second: {fileID: 2100000, guid: 9f99f018ab3343b418341e303e3cf72a, type: 2}
+    second: {fileID: 2100000, guid: 50b40df5e5e248d41ae7916099ce4ef9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: GhostLegs
-    second: {fileID: 2100000, guid: 64849d739b739eb41b727ff778775f03, type: 2}
+    second: {fileID: 2100000, guid: f03fc65190933e1488e6112261aea26f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
