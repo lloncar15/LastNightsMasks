@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 1540898699380637114}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,7 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc137bdef25b4b64bad5543a505ee44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: com.lastnightsmasks.player::LastNightsMasks.Player.PlayerMovementController
-  inputController: {fileID: 0}
   cameraHolder: {fileID: 8401254500365245250}
   playerConfig: {fileID: 11400000, guid: e04ca3e1bb29c4d179593860b34a9fe2, type: 2}
 --- !u!114 &1540898699380637114
@@ -257,7 +256,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2250b17b25748599d1f21c09fc7b259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: com.lastnightsmasks.player::LastNightsMasks.Player.PlayerInteractionController
-  inputController: {fileID: 0}
+  playerCamera: {fileID: 8354387622068796585}
+  interactPromptUI: {fileID: 0}
+  maxLookDistance: 10
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  debugList: []
 --- !u!1 &8993339288850932476
 GameObject:
   m_ObjectHideFlags: 0
