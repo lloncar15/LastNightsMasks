@@ -22,14 +22,14 @@ position: 95,3
 Magician: Urgh... My head. Last night's party was mad. 
 -> Yeah, it was something. Have you seen my keys?
     Magician: What do you mean keys? 
--> Like keys... to open doors? 
-    Magician: I'm not sure. 
-    Magician: Do you want to play a game?
-    -> Yes
-        Magician: Go look under the bed. I have a surprise for you.
-    //A magician hat is spawned when the player touches the bed
-    -> No
-    //Magician walks away 
+    -> Like keys... to open doors? 
+        Magician: I'm not sure. 
+        Magician: Do you want to play a game?
+        -> Yes
+            Magician: Go look under the bed. I have a surprise for you.
+        //A magician hat is spawned when the player touches the bed
+        -> No
+        //Magician walks away 
 ===
 
 title: Ghosty
