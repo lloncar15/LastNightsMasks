@@ -25,12 +25,16 @@ namespace LastNightsMasks.Player {
         private HashSet<IInteractable> _nearbyInteractables = new();
         private IInteractable _currentTarget;
         [SerializeField] private List<GameObject> debugList = new();
+
+        private bool _isInteracting;
         
         private void OnEnable() {
             InputController.Instance.OnInteractPressed += TryToInteract;
             InputController.Instance.OnInteraction += OnInteraction;
             InteractableTrigger.OnPlayerEntered += RegisterNearbyInteractable;
             InteractableTrigger.OnPlayerExited += UnregisterNearbyInteractable;
+            InteractableObject.InteractedWithObject += OnBeginInteraction;
+            InteractableObject.FinishedInteractingWithObject += OnFinishInteraction;
         }
 
         private void OnDisable() {
@@ -38,18 +42,27 @@ namespace LastNightsMasks.Player {
             InputController.Instance.OnInteraction -= OnInteraction;
             InteractableTrigger.OnPlayerEntered -= RegisterNearbyInteractable;
             InteractableTrigger.OnPlayerExited -= UnregisterNearbyInteractable;
+            InteractableObject.InteractedWithObject -= OnBeginInteraction;
+            InteractableObject.FinishedInteractingWithObject -= OnFinishInteraction;
         }
 
-        private void Awake() {
-            
+        private void OnBeginInteraction(Transform _) {
+            ClearCurrentTarget();
+            _isInteracting = true;
+        }
+
+        private void OnFinishInteraction() {
+            _isInteracting = false;
         }
 
         private void Start() {
-            interactPromptUI.SetActive(false);
+            SetInteractPromptUI(false);
         }
 
         private void Update() {
-            CheckForInteractable();
+            if (!_isInteracting) {
+                CheckForInteractable();
+            }
         }
 
         private void CheckForInteractable() {
@@ -92,7 +105,11 @@ namespace LastNightsMasks.Player {
                 _currentTarget.OnHoverEnter();
             }
 
-            interactPromptUI.SetActive(true);
+            SetInteractPromptUI(true);
+        }
+
+        private void SetInteractPromptUI(bool active) {
+            interactPromptUI.SetActive(active);
         }
 
         public void RegisterNearbyInteractable(IInteractable interactable) {
@@ -114,7 +131,7 @@ namespace LastNightsMasks.Player {
         }
 
         private void OnInteraction() {
-            InputController.Instance.SwitchToInputMode(InputMode.General);
+            
         }
 
         private void TryToInteract() {
@@ -137,9 +154,8 @@ namespace LastNightsMasks.Player {
             if (_currentTarget != null) {
                 _currentTarget.OnHoverExit();
                 _currentTarget = null;
+                SetInteractPromptUI(false);
             }
-            
-            interactPromptUI.SetActive(false);
         }
         
         public bool HasTarget => _currentTarget != null;

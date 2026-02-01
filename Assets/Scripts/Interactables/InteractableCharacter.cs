@@ -1,4 +1,3 @@
-using System;
 using System.Threading;
 using UnityEngine;
 using LastNightsMasks.Input;
@@ -8,6 +7,13 @@ namespace LastNightsMasks.Interactable {
     public class InteractableCharacter : InteractableObject {
         [SerializeField] private DialogueReference dialogue = new();
         [SerializeField] private DialogueRunner dialogueRunner;
+
+        private void OnEnable() {
+            dialogueRunner.onDialogueComplete?.AddListener(OnDialogueCompleted);
+        }
+        private void OnDisable() {
+            dialogueRunner.onDialogueComplete?.RemoveListener(OnDialogueCompleted);
+        }
 
         public void OnValidate() {
             if (dialogueRunner == null) {
@@ -27,7 +33,9 @@ namespace LastNightsMasks.Interactable {
             InteractedWithObject?.Invoke(lookAtPoint);
 
             await StartInteraction();
-            
+        }
+
+        private void OnDialogueCompleted() {
             FinishedInteractingWithObject?.Invoke();
             InputController.Instance.SwitchToInputMode(InputMode.General);
         }
