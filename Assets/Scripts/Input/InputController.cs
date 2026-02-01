@@ -41,6 +41,10 @@ namespace LastNightsMasks.Input {
             _inputActions = new PlayerInputActions();
         }
 
+        private void Start() {
+            SwitchToInputMode(InputMode.Interact);
+        }
+
         private void OnEnable() {
             SwitchToInputMode(InputMode.General);
             _inputActions.UI.Enable();
