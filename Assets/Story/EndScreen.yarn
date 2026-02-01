@@ -14,6 +14,8 @@ Wait. Before you go.
 Who exactly are you?
 //Camera slowly turns 180°
 Oh.
+You're a rabbit.
+<<seen  SoundController>>
 //Bebe (off-screen): Hey… have you seen my rabbit?
 Guess you were home the whole time.
 A home that lives within you.

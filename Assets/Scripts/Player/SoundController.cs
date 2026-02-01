@@ -1,11 +1,12 @@
 using UnityEngine;
+using Yarn.Unity;
 
 namespace LastNightsMasks.Player {
     public class SoundController : MonoBehaviour {
         private static SoundController _instance;
         
         [Header("Audio Sources")]
-        [SerializeField] private AudioSource musicSource;
+        [SerializeField] public AudioSource musicSource;
 
         [Header("Volume Settings")]
         [Range(0f, 1f)] public float masterVolume = 1f;
@@ -17,6 +18,7 @@ namespace LastNightsMasks.Player {
 
         [Header("Background Music")] 
         [SerializeField] private AudioClip backgroundMusic;
+        [SerializeField] public AudioClip seen;
         
         public static SoundController Instance {
             get {
@@ -112,6 +114,11 @@ namespace LastNightsMasks.Player {
             {
                 musicSource.volume = GetMusicVolume();
             }
+        }
+
+        [YarnCommand("seen")]
+        public void Seen() {
+            Instance.PlaySound(musicSource, seen);
         }
     }
 }
