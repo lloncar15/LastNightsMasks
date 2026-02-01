@@ -8,11 +8,16 @@ Bebe: Have you seen my rabbit?
     Bebe: Are you playing with me?
     //Bebe walks away
 -> No
+    Bebe: Hm.
     Bebe: Can you find me if you'd see my rabbit?
     -> Okay
+        Bebe: Thanks.
     -> Maybe
+        Bebe: Figures.
     -> No
+        Bebe: Right.
     -> Look closer
+        Bebe: ...I am.
 //Bebe walks away
 <<set $talkedToBebe = true>>
 <<interact Bebe>>
@@ -22,28 +27,34 @@ title: Magician
 position: 95,3
 ---
 <<declare $talkedToMagician = false>>
-Magician: Urgh... My head. Last night's party was mad. 
+Magician: Urgh… my head.
+Magician: Last night's party... was mad.
 -> Yeah, it was something. Have you seen my keys?
-    Magician: What do you mean keys? 
-    -> Like keys... to open doors? 
-        Magician: I'm not sure. 
+    Magician: Keys?
+    Magician: What do you mean keys?
+    -> You know keys... to open doors?
+        Magician: Hmm.
+        Magician: I'm not sure.
+        Magician: But...
         Magician: Do you want to play a game?
         -> Yes
-            Magician: Go, look under the bed. I have a surprise for you.
+            Magician: Go on, look under the bed. I left a surprise for you.
             <<set $talkedToMagician = true>>
         //Bed is triggered to claim magician hat
         -> No
-        //Magician walks away 
+            Magician: Okay. Suit yourself.
+        //Magician walks away
 ===
 
 title: Ghosty
 position: -240,3
 ---
 <<declare $talkedToGhosty = false>>
-Ghosty: Ohh... I feel so alive today.
+Ghosty: Ohhh... I feel so alive today.
 -> You look good. What's your secret?
     Ghosty: I eat a lot of veggies. Like A LOT.
      -> Sounds trippy.
+     Ghosty: You should try it sometime.
      <<set $talkedToGhosty = true>>
      //Mushroom chair is triggered to claim mushroom
 -> I need to go home. Have you seen my keys?
@@ -55,19 +66,23 @@ position: 146,-221
 ---
 <<declare $talkedToDolores = false>>
 -> Wow, Dolores. You survived last night!
-Dolores: You saying. Do I look like a bird to you?..
+Dolores: You say. Do I look like a bird to you?..
 -> Uhh, I don't know.
-Dolores: Anyways, always same.. All that aside, why do you always call me when you're high?
+Dolores: Anyway, always same ... 
+Dolores: All that aside, why do you always call me when you're high?
     -> I didn't call you. You were here when I arrived yesterday.
     Dolores: Are you high? Do you even listen to what I'm saying?
     -> Can you just tell me where my keys are?
     Dolores: Don't worry, I'll help you find your keys. Come here. 
     //Dolores goes back a little if possible and continue after the player follows
-    Dolores: Let's talk here. I don't trust Bebe. Who'd bring their rabbit to a private house party? Freaky.
-    Dolores: Okay, take a deep breath now. When was the last time you saw your keys?
+    Dolores: Let's talk over here. 
+    Dolores: I don't trust Bebe. Who'd bring their rabbit to a private house party? Freaky.
+    Dolores: Okay, take a deep breath now. 
+    Dolores: When was the last time you saw your keys?
     -> Take a deep breath
-        -> Sigh...
+        -> *Sigh…*
     -> I saw it in the magician's hat last time
+    Dolores: Sometimes what you're looking for isn't lost.
     Dolores: Just listen to your heart. 
     Dolores: I'm sure you'll find what you're looking for.
     <<set $talkedToDolores = true>>
