@@ -21,7 +21,7 @@ Bebe: Have you seen my rabbit?
 //Bebe walks away
 <<set $talkedToBebe = true>>
 <<interact Bebe>>
-<<playsound "Have you seen my rabbit">>
+// <<playsound "Have you seen my rabbit">>
 ===
 
 title: Magician

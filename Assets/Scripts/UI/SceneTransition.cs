@@ -5,22 +5,34 @@ using DG.Tweening;
 
 namespace LastNightsMasks.UI {
     public class SceneTransition : MonoBehaviour {
-        public static SceneTransition Instance;
+        public static SceneTransition _instance;
+        
+        public static SceneTransition Instance {
+            get {
+                if (_instance == null) {
+                    _instance = FindAnyObjectByType<SceneTransition>();
+                    if (_instance == null) {
+                        GameObject go = new GameObject("InputController");
+                        _instance = go.AddComponent<SceneTransition>();
+                    }
+                }
+
+                return _instance;
+            }
+        }
     
         [SerializeField] private Image blackCircle;
         [SerializeField] private float transitionDuration = 0.8f;
     
         private void Awake()
         {
-            if (Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            if (!Application.isPlaying)
+                return;
+
+            _instance = this;
+            
+            DontDestroyOnLoad(blackCircle.gameObject);
+            DontDestroyOnLoad(blackCircle.transform.parent.gameObject);
         }
 
         private void Start()
