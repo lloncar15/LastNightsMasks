@@ -12,7 +12,6 @@ namespace LastNightsMasks.UI {
         public class LogEntry {
             public string characterName;
             public string lineText;
-            public string nodeTitle;
         }
 
         private void Start() {
@@ -34,22 +33,20 @@ namespace LastNightsMasks.UI {
         /// <summary>
         /// Adds the character, text and current node name to the Log
         /// </summary>
-        public void AddToLog(string character, string text) {
+        private void AddToLog(string character, string text) {
             conversationLog.Add(new LogEntry {
                 characterName = character,
                 lineText = text,
-                nodeTitle = dialogueRunner.Dialogue.CurrentNode
             });
         }
 
         /// <summary>
-        /// Called from yar with a custom command
+        /// Called from yarn with a custom command
         /// </summary>
-        void LogLine(string[] parameters) {
-            if (parameters.Length != 2) {
-                // Called from yarn with <<logline CharacterName LineText>>
-                AddToLog(parameters[0], parameters[1]);
-            }
+        [YarnCommand("log")]
+        public void LogLine(string charName, string text) {
+            Debug.Log("Logged:  " + charName + ": " + text);
+            AddToLog(charName, text);
         }
     }
 }
