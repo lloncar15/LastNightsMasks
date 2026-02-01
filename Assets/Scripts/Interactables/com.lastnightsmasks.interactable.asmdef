@@ -1,7 +1,10 @@
 {
     "name": "com.lastnightsmasks.interactable",
     "rootNamespace": "",
-    "references": ["GUID:7fed97b195f0c48938f5d179733b3f85"],
+    "references": [
+        "GUID:7fed97b195f0c48938f5d179733b3f85",
+        "GUID:34aa492b82754644eac2f903cd496268"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

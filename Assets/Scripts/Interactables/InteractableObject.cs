@@ -6,27 +6,28 @@ using UnityEngine;
 namespace LastNightsMasks.Interactable {
     [RequireComponent(typeof(InteractableTrigger))]
     public class InteractableObject : MonoBehaviour, IInteractable {
-        private bool _hasAlreadyBeenInteracted;
-        private bool _isBeingLookedAt;
+        [SerializeField] protected Transform lookAtPoint;
+        protected bool hasAlreadyBeenInteracted;
+        protected bool isBeingLookedAt;
         private bool _canBeInteracted;
 
         public static Action<Transform> InteractedWithObject;
         public static Action FinishedInteractingWithObject;
 
-        public void Interact() {
-            if (!_isBeingLookedAt)
+        public virtual void Interact() {
+            if (!isBeingLookedAt)
                 return;
             
             InputController.Instance.SwitchToInputMode(InputMode.Interact);
             
-            InteractedWithObject?.Invoke(transform);
+            InteractedWithObject?.Invoke(lookAtPoint);
 
             StartCoroutine(Test());
         }
 
         private IEnumerator Test() {
-            _hasAlreadyBeenInteracted = true;
-            _isBeingLookedAt = false;
+            hasAlreadyBeenInteracted = true;
+            isBeingLookedAt = false;
             yield return new WaitForSeconds(3f);
             FinishedInteractingWithObject?.Invoke();
             InputController.Instance.SwitchToInputMode(InputMode.General);
@@ -36,16 +37,16 @@ namespace LastNightsMasks.Interactable {
             if (!CanInteract())
                 return;
 
-            _isBeingLookedAt = true;
+            isBeingLookedAt = true;
         }
         public void OnHoverExit() {
             if (!CanInteract())
                 return;
 
-            _isBeingLookedAt = false;
+            isBeingLookedAt = false;
         }
         public void OnRangeEnter() {
-            if (_hasAlreadyBeenInteracted)
+            if (hasAlreadyBeenInteracted)
                 return;
             
             _canBeInteracted = true;
@@ -57,7 +58,7 @@ namespace LastNightsMasks.Interactable {
         public Transform Transform => transform;
 
         public bool CanInteract() {
-            return _canBeInteracted && !_hasAlreadyBeenInteracted;
+            return _canBeInteracted && !hasAlreadyBeenInteracted;
         }
     }
 }

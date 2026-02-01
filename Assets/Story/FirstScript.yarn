@@ -1,6 +1,7 @@
 ﻿title: Bebe
 position: -17,193
 ---
+<<declare $talkedToBebe = false>>
 //Bebe comes to the player every 3 mins, and asks this question
 Bebe: Have you seen my rabbit?
 -> Yes
@@ -13,12 +14,14 @@ Bebe: Have you seen my rabbit?
     -> No
     -> Look closer
 //Bebe walks away
-//Rabbit trinket is triggered to claim easter egg
+<<set $talkedToBebe = true>>
+<<interact Bebe>>
 ===
 
 title: Magician
 position: 95,3
 ---
+<<declare $talkedToMagician = false>>
 Magician: Urgh... My head. Last night's party was mad. 
 -> Yeah, it was something. Have you seen my keys?
     Magician: What do you mean keys? 
@@ -27,6 +30,7 @@ Magician: Urgh... My head. Last night's party was mad.
         Magician: Do you want to play a game?
         -> Yes
             Magician: Go, look under the bed. I have a surprise for you.
+            <<set $talkedToMagician = true>>
         //Bed is triggered to claim magician hat
         -> No
         //Magician walks away 
@@ -35,10 +39,12 @@ Magician: Urgh... My head. Last night's party was mad.
 title: Ghosty
 position: -240,3
 ---
+<<declare $talkedToGhosty = false>>
 Ghosty: Ohh... I feel so alive today.
 -> You look good. What's your secret?
     Ghosty: I eat a lot of veggies. Like A LOT.
      -> Sounds trippy.
+     <<set $talkedToGhosty = true>>
      //Mushroom chair is triggered to claim mushroom
 -> I need to go home. Have you seen my keys?
     Ghosty: Do I look like a lost-and-found?
@@ -47,6 +53,7 @@ Ghosty: Ohh... I feel so alive today.
 title: Dolores
 position: 146,-221
 ---
+<<declare $talkedToDolores = false>>
 -> Wow, Dolores. You survived last night!
 Dolores: You saying. Do I look like a bird to you?..
 -> Uhh, I don't know.
@@ -63,6 +70,7 @@ Dolores: Anyways, always same.. All that aside, why do you always call me when y
     -> I saw it in the magician's hat last time
     Dolores: Just listen to your heart. 
     Dolores: I'm sure you'll find what you're looking for.
+    <<set $talkedToDolores = true>>
     //Heart poster is triggered to claim heart
  ===
 
