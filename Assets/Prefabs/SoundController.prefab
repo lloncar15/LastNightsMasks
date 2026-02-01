@@ -49,4 +49,4 @@ MonoBehaviour:
   musicVolume: 1
   sfxVolume: 1
   musicFadeDuration: 1
-  backgroundMusic: {fileID: 0}
+  backgroundMusic: {fileID: 8300000, guid: 264217d240120445ea37b9227f8f5fbe, type: 3}
