@@ -27,6 +27,10 @@ namespace LastNightsMasks.Items {
 
         public IReadOnlyList<ItemData> CollectedItems => _collectedItems;
 
+        public static Action OnAllItemsCollected;
+        
+        private const int MAX_ITEMS = 4;
+
         private void Awake() {
             if (!Application.isPlaying) 
                 return;
@@ -48,6 +52,10 @@ namespace LastNightsMasks.Items {
 
             _collectedItems.Add(item);
             OnItemCollected?.Invoke(item);
+
+            if (_collectedItems.Count == MAX_ITEMS) {
+                OnAllItemsCollected?.Invoke();
+            }
         }
 
         public void ItemDropToActivate(ItemDrop item) {

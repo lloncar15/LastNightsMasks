@@ -33,6 +33,10 @@ namespace LastNightsMasks.Input {
             }
         }
 
+        private void OnDestroy() {
+            Destroy(_instance);
+        }
+
         private void Awake() {
             if (!Application.isPlaying)
                 return;

@@ -2,16 +2,18 @@ using System;
 using System.Collections.Generic;
 using LastNightsMasks.Input;
 using LastNightsMasks.Interactable;
-using NUnit.Framework;
+using LastNightsMasks.Items;
+using LastNightsMasks.UI;
 using UnityEngine;
+using Yarn.Unity;
 
 namespace LastNightsMasks.Player {
     public class PlayerInteractionController : MonoBehaviour {
         [Header("References")]
         [SerializeField] private Camera playerCamera;
         [SerializeField] private GameObject interactPromptUI;
-        [SerializeField] private CameraZoomController cameraZoomController;
-        [SerializeField] private PlayerInteractionController interactionController;
+        [SerializeField] private DialogueRunner  dialogueRunner;
+        [SerializeField] private DialogueReference dialogue;
 
         [Header("Settings")] 
         [SerializeField] private float maxLookDistance = 10f;
@@ -35,6 +37,7 @@ namespace LastNightsMasks.Player {
             InteractableTrigger.OnPlayerExited += UnregisterNearbyInteractable;
             InteractableObject.InteractedWithObject += OnBeginInteraction;
             InteractableObject.FinishedInteractingWithObject += OnFinishInteraction;
+            ItemController.OnAllItemsCollected += OnAllItemsCollected;
         }
 
         private void OnDisable() {
@@ -44,6 +47,28 @@ namespace LastNightsMasks.Player {
             InteractableTrigger.OnPlayerExited -= UnregisterNearbyInteractable;
             InteractableObject.InteractedWithObject -= OnBeginInteraction;
             InteractableObject.FinishedInteractingWithObject -= OnFinishInteraction;
+            ItemController.OnAllItemsCollected -= OnAllItemsCollected;
+        }
+
+        private async void OnAllItemsCollected() {
+            if (dialogue == null) {
+                return;
+            }
+            
+            
+            if (!dialogue.IsValid || dialogue.nodeName == null) {
+                Debug.LogError($"Can't run dialogue {dialogue}: not a valid dialogue reference");
+                return;
+            }
+            
+            InputController.Instance.SwitchToInputMode(InputMode.Interact);
+            await dialogueRunner.StartDialogue(dialogue.nodeName);
+            await dialogueRunner.DialogueTask;
+            
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            
+            SceneTransition.Instance.LoadScene("MainMenuScene");
         }
 
         private void OnBeginInteraction(Transform _) {
