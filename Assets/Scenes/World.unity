@@ -527,8 +527,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8bcdf048364d339458f4e1edac54f021, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 265401900}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bcdf048364d339458f4e1edac54f021, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1803143624}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bcdf048364d339458f4e1edac54f021, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1803143623}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bcdf048364d339458f4e1edac54f021, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1803143622}
   m_SourcePrefab: {fileID: 100100000, guid: 8bcdf048364d339458f4e1edac54f021, type: 3}
 --- !u!1 &75482274
 GameObject:
@@ -1084,6 +1096,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &265401899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 265401900}
+  - component: {fileID: 265401901}
+  m_Layer: 6
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &265401900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265401899}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.059, z: 0.0078}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543894295}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &265401901
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265401899}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.02
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &296053073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,6 +1303,11 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 3bc81d80c5a048f4baa264e19937e1f7, type: 2}
+--- !u!1 &348467087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d1e4e33e4e4d2554fb462f57b9d91e3d, type: 3}
+  m_PrefabInstance: {fileID: 1546061667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &358592465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,8 +1419,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 564941982deb72944bdf45acd8a930fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1537870278}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 564941982deb72944bdf45acd8a930fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 886364435}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 564941982deb72944bdf45acd8a930fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 886364434}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 564941982deb72944bdf45acd8a930fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 886364433}
   m_SourcePrefab: {fileID: 100100000, guid: 564941982deb72944bdf45acd8a930fe, type: 3}
 --- !u!4 &378372995 stripped
 Transform:
@@ -2386,14 +2468,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f10340f6831bbd04f9af4a7e3b425873, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2101641823}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f10340f6831bbd04f9af4a7e3b425873, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 578682401}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f10340f6831bbd04f9af4a7e3b425873, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 578682400}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f10340f6831bbd04f9af4a7e3b425873, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 578682399}
   m_SourcePrefab: {fileID: 100100000, guid: f10340f6831bbd04f9af4a7e3b425873, type: 3}
 --- !u!4 &578682397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f10340f6831bbd04f9af4a7e3b425873, type: 3}
   m_PrefabInstance: {fileID: 578682396}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &578682398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f10340f6831bbd04f9af4a7e3b425873, type: 3}
+  m_PrefabInstance: {fileID: 578682396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &578682399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578682398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09988c7c193d4df0bce212a456b1f9f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableObject
+  lookAtPoint: {fileID: 0}
+  itemDropToActivate: {fileID: 1285772599}
+--- !u!114 &578682400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578682398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e54c9d74c8a4457aa736319b3079e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableTrigger
+--- !u!65 &578682401
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578682398}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.04, y: 0.03, z: 0.04}
+  m_Center: {x: 0, y: -0.01, z: 0}
 --- !u!1 &600194084
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,6 +3362,58 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ccd16598166443edb86d811b70b150a, type: 3}
+--- !u!1 &886364430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 564941982deb72944bdf45acd8a930fe, type: 3}
+  m_PrefabInstance: {fileID: 378372994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &886364433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886364430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09988c7c193d4df0bce212a456b1f9f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableObject
+  lookAtPoint: {fileID: 0}
+  itemDropToActivate: {fileID: 1166029043}
+--- !u!114 &886364434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886364430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e54c9d74c8a4457aa736319b3079e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableTrigger
+--- !u!65 &886364435
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886364430}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.05, y: 0.06, z: 0.05}
+  m_Center: {x: 0, y: 0.01, z: 0.02}
 --- !u!1 &894135330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3393,6 +3591,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49be2de5ff565a64d9006aeb845dce09, type: 3}
+--- !u!1 &971315098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 971315099}
+  - component: {fileID: 971315100}
+  m_Layer: 6
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &971315099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971315098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1546061668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &971315100
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971315098}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.01
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1000469893
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,6 +4216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mushroomCollect
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8bb1b799827fda24f95a3146ed9ba17e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3972,6 +4227,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bb1b799827fda24f95a3146ed9ba17e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1166029043}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bb1b799827fda24f95a3146ed9ba17e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1166029046}
   m_SourcePrefab: {fileID: 100100000, guid: 8bb1b799827fda24f95a3146ed9ba17e, type: 3}
 --- !u!4 &1166029041 stripped
 Transform:
@@ -3995,9 +4253,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278b69c6c3c74a6b994c14fb9ccf2583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: com.lastnightsmasks.items::LastNightsMasks.Items.ItemDrop
-  itemData: {fileID: 0}
+  itemData: {fileID: 11400000, guid: 0d7c273e0a88649f98db5d761d3656e3, type: 2}
   bounceHeight: 0.3
   bounceDuration: 1
+--- !u!135 &1166029046
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166029042}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.015
+  m_Center: {x: -0.0000000037252903, y: -9.313224e-10, z: 0.008538156}
 --- !u!1001 &1167141448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4539,6 +4818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableCharacter
   lookAtPoint: {fileID: 118755322}
+  itemDropToActivate: {fileID: 0}
   dialogue:
     project: {fileID: 7545569452688597077, guid: c9d1b38366576494c95b057989f8d060, type: 3}
     nodeName: Ghosty
@@ -4740,6 +5020,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: eastereggCollect
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8bc4a298c1d007a40946141ba74b4ef3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4747,6 +5031,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bc4a298c1d007a40946141ba74b4ef3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1285772599}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bc4a298c1d007a40946141ba74b4ef3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1285772602}
   m_SourcePrefab: {fileID: 100100000, guid: 8bc4a298c1d007a40946141ba74b4ef3, type: 3}
 --- !u!4 &1285772597 stripped
 Transform:
@@ -4770,9 +5057,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278b69c6c3c74a6b994c14fb9ccf2583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: com.lastnightsmasks.items::LastNightsMasks.Items.ItemDrop
-  itemData: {fileID: 0}
+  itemData: {fileID: 11400000, guid: f135861b6a9ea4be981ad0313f27d21c, type: 2}
   bounceHeight: 0.3
   bounceDuration: 1
+--- !u!135 &1285772602
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285772598}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.07
+  m_Center: {x: 4.6566134e-10, y: 3.8546338e-10, z: 0.006467002}
 --- !u!1 &1287165213
 GameObject:
   m_ObjectHideFlags: 0
@@ -4996,6 +5304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableCharacter
   lookAtPoint: {fileID: 1747002307}
+  itemDropToActivate: {fileID: 0}
   dialogue:
     project: {fileID: 7545569452688597077, guid: c9d1b38366576494c95b057989f8d060, type: 3}
     nodeName: Magician
@@ -5261,6 +5570,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4095633448417497508, guid: e6ea3d2be94d0c7479c1084a368d3073, type: 3}
   m_PrefabInstance: {fileID: 1537307598}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1537870277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1537870278}
+  - component: {fileID: 1537870279}
+  m_Layer: 6
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1537870278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537870277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 378372995}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1537870279
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537870277}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.02
+  m_Center: {x: 0, y: 0, z: 0.01}
 --- !u!1001 &1537991638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5529,14 +5891,73 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d1e4e33e4e4d2554fb462f57b9d91e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 971315099}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1e4e33e4e4d2554fb462f57b9d91e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1546061673}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1e4e33e4e4d2554fb462f57b9d91e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1546061672}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1e4e33e4e4d2554fb462f57b9d91e3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1546061671}
   m_SourcePrefab: {fileID: 100100000, guid: d1e4e33e4e4d2554fb462f57b9d91e3d, type: 3}
 --- !u!4 &1546061668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d1e4e33e4e4d2554fb462f57b9d91e3d, type: 3}
   m_PrefabInstance: {fileID: 1546061667}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1546061671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348467087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09988c7c193d4df0bce212a456b1f9f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableObject
+  lookAtPoint: {fileID: 0}
+  itemDropToActivate: {fileID: 1954336924}
+--- !u!114 &1546061672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348467087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e54c9d74c8a4457aa736319b3079e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableTrigger
+--- !u!65 &1546061673
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348467087}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.03, y: 0.04, z: 0.02}
+  m_Center: {x: -0.005, y: 0, z: 0.005}
 --- !u!1001 &1547416721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5737,6 +6158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableCharacter
   lookAtPoint: {fileID: 1640169707}
+  itemDropToActivate: {fileID: 0}
   dialogue:
     project: {fileID: 7545569452688597077, guid: c9d1b38366576494c95b057989f8d060, type: 3}
     nodeName: Dolores
@@ -6311,7 +6733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1741037035
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6345,7 +6767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.53333336}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6712,8 +7134,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6783,6 +7205,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783187118}
   m_CullTransparentMesh: 1
+--- !u!1 &1803143619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bcdf048364d339458f4e1edac54f021, type: 3}
+  m_PrefabInstance: {fileID: 74399530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1803143622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803143619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09988c7c193d4df0bce212a456b1f9f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableObject
+  lookAtPoint: {fileID: 0}
+  itemDropToActivate: {fileID: 1912108077}
+--- !u!114 &1803143623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803143619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e54c9d74c8a4457aa736319b3079e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableTrigger
+--- !u!65 &1803143624
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803143619}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6, y: 0.5, z: 0.021468813}
+  m_Center: {x: -0.00038439033, y: -0.00038100773, z: 0.010490603}
 --- !u!1001 &1834502248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6879,19 +7353,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.92387956
+      value: 0.9848078
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.38268343
+      value: -0.17364825
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6899,7 +7373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -45
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -6963,6 +7437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableCharacter
   lookAtPoint: {fileID: 1287165214}
+  itemDropToActivate: {fileID: 0}
   dialogue:
     project: {fileID: 7545569452688597077, guid: c9d1b38366576494c95b057989f8d060, type: 3}
     nodeName: Bebe
@@ -7272,6 +7747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wizardhatCollect
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a9bd7ede925e9a74db08b9f193fedb99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7279,6 +7758,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a9bd7ede925e9a74db08b9f193fedb99, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1912108077}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a9bd7ede925e9a74db08b9f193fedb99, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1912108080}
   m_SourcePrefab: {fileID: 100100000, guid: a9bd7ede925e9a74db08b9f193fedb99, type: 3}
 --- !u!4 &1912108075 stripped
 Transform:
@@ -7302,9 +7784,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278b69c6c3c74a6b994c14fb9ccf2583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: com.lastnightsmasks.items::LastNightsMasks.Items.ItemDrop
-  itemData: {fileID: 0}
+  itemData: {fileID: 11400000, guid: 46a59ac33da994386bbaef40a20eb40d, type: 2}
   bounceHeight: 0.3
   bounceDuration: 1
+--- !u!135 &1912108080
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912108076}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.06
+  m_Center: {x: 0, y: 0, z: -0.01}
 --- !u!1001 &1954336921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7327,11 +7830,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea717efd4e4220245b772479fc8df4d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.389
+      value: 0.481
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea717efd4e4220245b772479fc8df4d5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.806278
+      value: 5.007
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ea717efd4e4220245b772479fc8df4d5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7361,9 +7864,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ea717efd4e4220245b772479fc8df4d5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ea717efd4e4220245b772479fc8df4d5, type: 3}
       propertyPath: m_Name
       value: heartCollect
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ea717efd4e4220245b772479fc8df4d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7372,6 +7883,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea717efd4e4220245b772479fc8df4d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1954336924}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea717efd4e4220245b772479fc8df4d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1954336927}
   m_SourcePrefab: {fileID: 100100000, guid: ea717efd4e4220245b772479fc8df4d5, type: 3}
 --- !u!4 &1954336922 stripped
 Transform:
@@ -7395,9 +7909,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278b69c6c3c74a6b994c14fb9ccf2583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: com.lastnightsmasks.items::LastNightsMasks.Items.ItemDrop
-  itemData: {fileID: 0}
+  itemData: {fileID: 11400000, guid: 0fa221df241574fd1adfa8638244f3be, type: 2}
   bounceHeight: 0.3
   bounceDuration: 1
+--- !u!135 &1954336927
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954336923}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.04
+  m_Center: {x: -0.00030397807, y: -0.001254372, z: 0.0027296806}
 --- !u!224 &2040977436 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3074965125313078262, guid: 7c9adcf8dba604aebbee97935042d0f6, type: 3}
@@ -7535,6 +8070,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8470843179711590802, guid: 983cb202a1b81444988818f79d22a628, type: 3}
   m_PrefabInstance: {fileID: 2092347015}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2101641822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2101641823}
+  - component: {fileID: 2101641824}
+  m_Layer: 6
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2101641823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101641822}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 578682397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2101641824
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101641822}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.01
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2113317134
 PrefabInstance:
   m_ObjectHideFlags: 0
