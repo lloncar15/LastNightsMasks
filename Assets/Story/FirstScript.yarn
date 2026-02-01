@@ -40,6 +40,7 @@ Magician: Last night's party... was mad.
         -> Yes
             Magician: Go on, look under the bed. I left a surprise for you.
             <<set $talkedToMagician = true>>
+            <<interact Magician>>
         //Bed is triggered to claim magician hat
         -> No
             Magician: Okay. Suit yourself.
@@ -56,6 +57,7 @@ Ghosty: Ohhh... I feel so alive today.
      -> Sounds trippy.
      Ghosty: You should try it sometime.
      <<set $talkedToGhosty = true>>
+     <<interact Ghosty>>
      //Mushroom chair is triggered to claim mushroom
 -> I need to go home. Have you seen my keys?
     Ghosty: Do I look like a lost-and-found?
@@ -86,6 +88,7 @@ Dolores: All that aside, why do you always call me when you're high?
     Dolores: Just listen to your heart. 
     Dolores: I'm sure you'll find what you're looking for.
     <<set $talkedToDolores = true>>
+    <<interact Dolores>>
     //Heart poster is triggered to claim heart
  ===
 
