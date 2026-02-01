@@ -4,32 +4,15 @@ position: -17,193
 <<declare $talkedToBebe = false>>
 //Bebe comes to the player every 3 mins, and asks this question
 Bebe: Have you seen my rabbit?
-<<log Logger "Bebe" "Have you seen my rabbit?">>
 -> Yes
-    <<log Logger "Player" "Yes">>
     Bebe: Are you playing with me?
-    <<log Logger "Bebe" "Are you playing with me?">>
     //Bebe walks away
 -> No
-    <<log Logger "Player" "No">>
     Bebe: Can you find me if you'd see my rabbit?
-    <<log Logger "Bebe" "Can you find me if you'd see my rabbit?">>
     -> Okay
-        <<log "Player" "Okay">>
-        Bebe: Thank you! You're the best!
-        <<log Logger "Bebe" "Thank you! You're the best!">>
     -> Maybe
-        <<log Logger "Player" "Maybe">>
-        Bebe: Aww... That's okay. 
-        <<log Logger "Bebe" "Aww... That's okay.">>
     -> No
-        <<log Logger "Player" "No">>
-        Bebe: That's rude.
-        <<log Logger "Bebe" "That's rude.">>
     -> Look closer
-        <<log Logger "Player" "Look closer">>
-        Bebe: You're not very helpful.
-        <<log Logger "Bebe" "You're not very helpful.">>
 //Bebe walks away
 <<set $talkedToBebe = true>>
 <<interact Bebe>>
