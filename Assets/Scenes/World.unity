@@ -4240,8 +4240,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.468845, y: 8.9712715, z: 2.980594}
-  m_Center: {x: 0.1358509, y: 3.9856367, z: 0.13351639}
+  m_Size: {x: 3.4688451, y: 8.9712715, z: 7.2712703}
+  m_Center: {x: 0.13585077, y: 3.9856367, z: 2.2788472}
 --- !u!95 &1230140784
 Animator:
   serializedVersion: 7
@@ -4461,15 +4461,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2193f79d203cf9149b2feaa34708b1fd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2193f79d203cf9149b2feaa34708b1fd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2193f79d203cf9149b2feaa34708b1fd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2193f79d203cf9149b2feaa34708b1fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4604,8 +4604,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.4905295, y: 7.233482, z: 4.097716}
-  m_Center: {x: -0.67069584, y: 3.1167407, z: 0.53609014}
+  m_Size: {x: 5.5739617, y: 7.2334814, z: 6.204351}
+  m_Center: {x: -1.2124121, y: 3.1167407, z: 1.5894074}
 --- !u!95 &1382457740
 Animator:
   serializedVersion: 7
@@ -5116,15 +5116,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5e35380f135af6843b111de04a994f74, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5e35380f135af6843b111de04a994f74, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5e35380f135af6843b111de04a994f74, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5e35380f135af6843b111de04a994f74, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5263,8 +5263,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.561774, y: 7.2791815, z: 3.5896678}
-  m_Center: {x: 0.22673674, y: 3.1395903, z: 1.2948331}
+  m_Size: {x: 3.5617743, y: 7.2791815, z: 5.209537}
+  m_Center: {x: 0.22673652, y: 3.1395903, z: 2.1047673}
 --- !u!95 &1559879253
 Animator:
   serializedVersion: 7
@@ -6345,6 +6345,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 721861291}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.20183
       objectReference: {fileID: 0}
@@ -6383,6 +6395,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 97b85322dd0e8ac4997a3163999f5572, type: 3}
       propertyPath: m_Name
@@ -6473,8 +6489,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3429875, y: 4.114335, z: 2.2331076}
-  m_Center: {x: -0.033366278, y: 1.5570409, z: 0.3954816}
+  m_Size: {x: 3.7936134, y: 4.114335, z: 3.6714885}
+  m_Center: {x: -0.75864816, y: 1.5570405, z: 1.114635}
 --- !u!95 &1856608202
 Animator:
   serializedVersion: 7
