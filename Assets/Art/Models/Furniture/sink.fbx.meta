@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 491210f3c9ac3e4448d95e909fb1a345
+guid: 98b9195ca2089d849812499918d9625d
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Pillow
-    second: {fileID: 2100000, guid: 55e573606c341314d86932d6808901a0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Sofa
-    second: {fileID: 2100000, guid: 7ac25a18fcf90874abdbee0d4468ee2b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Woodlegs
-    second: {fileID: 2100000, guid: b364d98905835c146bc27dd0108fa412, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
