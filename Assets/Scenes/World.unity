@@ -3749,6 +3749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghosty
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d9ded00a625b825478b1d3e07fd9aea3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3824,8 +3828,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.468845, y: 8.9712715, z: 2.980594}
+  m_Center: {x: 0.1358509, y: 3.9856367, z: 0.13351639}
 --- !u!1 &1287165213
 GameObject:
   m_ObjectHideFlags: 0
