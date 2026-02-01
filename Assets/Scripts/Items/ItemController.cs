@@ -49,5 +49,9 @@ namespace LastNightsMasks.Items {
             _collectedItems.Add(item);
             OnItemCollected?.Invoke(item);
         }
+
+        public void ItemDropToActivate(ItemDrop item) {
+            item.Appear();
+        }
     }
 }

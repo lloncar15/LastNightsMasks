@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using LastNightsMasks.Input;
+using LastNightsMasks.Items;
 using UnityEngine;
 
 namespace LastNightsMasks.Interactable {
     [RequireComponent(typeof(InteractableTrigger))]
     public class InteractableObject : MonoBehaviour, IInteractable {
         [SerializeField] protected Transform lookAtPoint;
+        [SerializeField] protected ItemDrop itemDropToActivate;
         protected bool hasAlreadyBeenInteracted;
         protected bool isBeingLookedAt;
         private bool _canBeInteracted;
@@ -18,19 +20,10 @@ namespace LastNightsMasks.Interactable {
             if (!isBeingLookedAt)
                 return;
             
-            InputController.Instance.SwitchToInputMode(InputMode.Interact);
-            
-            InteractedWithObject?.Invoke(lookAtPoint);
-
-            StartCoroutine(Test());
-        }
-
-        private IEnumerator Test() {
             hasAlreadyBeenInteracted = true;
             isBeingLookedAt = false;
-            yield return new WaitForSeconds(3f);
-            FinishedInteractingWithObject?.Invoke();
-            InputController.Instance.SwitchToInputMode(InputMode.General);
+            
+            ItemController.Instance.ItemDropToActivate(itemDropToActivate);
         }
         
         public void OnHoverEnter() {

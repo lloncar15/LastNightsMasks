@@ -27,7 +27,7 @@ namespace LastNightsMasks.Items {
         private void StartBouncing()
         {
             _bounceTween = transform.DOMoveY(_startPosition.y + bounceHeight, bounceDuration)
-                .SetEase(Ease.InOutSine)
+                .SetEase(Ease.InOutQuad)
                 .SetLoops(-1, LoopType.Yoyo);
         }
 
