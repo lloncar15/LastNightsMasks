@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.items::LastNightsMasks.Items.ItemData
   itemName: Mushroom
   itemText: Wanna do shrooms???
-  itemId: 3
+  itemId: 2
