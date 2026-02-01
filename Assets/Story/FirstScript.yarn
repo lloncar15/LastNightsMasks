@@ -67,6 +67,7 @@ title: Dolores
 position: 146,-221
 ---
 <<declare $talkedToDolores = false>>
+Dolores: ...
 -> Wow, Dolores. You survived last night!
 Dolores: You say. Do I look like a bird to you?..
 -> Uhh, I don't know.
