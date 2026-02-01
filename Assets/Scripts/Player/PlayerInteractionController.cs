@@ -11,10 +11,16 @@ namespace LastNightsMasks.Player {
         [SerializeField] private Camera playerCamera;
         [SerializeField] private GameObject interactPromptUI;
         [SerializeField] private CameraZoomController cameraZoomController;
+        [SerializeField] private PlayerInteractionController interactionController;
 
         [Header("Settings")] 
         [SerializeField] private float maxLookDistance = 10f;
         [SerializeField] private LayerMask interactableLayer;
+        
+        [Header("Debug")]
+        [SerializeField] private bool showDebugRay = true;
+        [SerializeField] private Color debugRayColorHit = Color.green;
+        [SerializeField] private Color debugRayColorMiss = Color.red;
 
         private HashSet<IInteractable> _nearbyInteractables = new();
         private IInteractable _currentTarget;
@@ -49,6 +55,9 @@ namespace LastNightsMasks.Player {
         private void CheckForInteractable() {
             if (_nearbyInteractables.Count == 0) {
                 ClearCurrentTarget();
+                if (showDebugRay) {
+                    Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * maxLookDistance, debugRayColorMiss);
+                }
                 return;
             }
             
@@ -56,10 +65,21 @@ namespace LastNightsMasks.Player {
 
             if (!Physics.Raycast(ray, out RaycastHit hit, maxLookDistance, interactableLayer)) {
                 ClearCurrentTarget();
+                if (showDebugRay) {
+                    Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * maxLookDistance, debugRayColorMiss);
+                }
                 return;
             }
             
+            if (showDebugRay) {
+                Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * hit.distance, debugRayColorHit);
+            }
+            
+            
             IInteractable interactable = hit.collider.gameObject.GetComponent<IInteractable>();
+            if (interactable == null) {
+                interactable = hit.collider.gameObject.GetComponentInParent<IInteractable>();
+            }
 
             if (interactable == null || !_nearbyInteractables.Contains(interactable) || !interactable.CanInteract()) {
                 ClearCurrentTarget();
