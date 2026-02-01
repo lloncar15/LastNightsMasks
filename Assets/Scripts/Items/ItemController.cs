@@ -27,14 +27,6 @@ namespace LastNightsMasks.Items {
 
         public IReadOnlyList<ItemData> CollectedItems => _collectedItems;
 
-        private void OnEnable() {
-            
-        }
-
-        private void OnDisable() {
-            
-        }
-
         private void Awake() {
             if (!Application.isPlaying) 
                 return;
