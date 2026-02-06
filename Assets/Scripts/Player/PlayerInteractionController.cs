@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using LastNightsMasks.Input;
 using LastNightsMasks.Interactable;
@@ -14,6 +13,7 @@ namespace LastNightsMasks.Player {
         [SerializeField] private GameObject interactPromptUI;
         [SerializeField] private DialogueRunner  dialogueRunner;
         [SerializeField] private DialogueReference dialogue;
+        [SerializeField] private CameraZoomController cameraZoom;
 
         [Header("Settings")] 
         [SerializeField] private float maxLookDistance = 10f;
@@ -185,6 +185,20 @@ namespace LastNightsMasks.Player {
         
         public bool HasTarget => _currentTarget != null;
         public IInteractable CurrentTarget => _currentTarget;
+
+        #endregion
+
+        #region End Game Interaction
+
+        /// <summary>
+        /// Called from yarn when camera needs to rotate and show the rabbit.
+        /// Ends the game after the dialogue finishes
+        /// </summary>
+        [YarnCommand("game_end_camera")]
+        public async YarnTask CameraRotationAndGameEnd() {
+            
+            await cameraZoom.OnEndGameRotation();
+        }
 
         #endregion
     }

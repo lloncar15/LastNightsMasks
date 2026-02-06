@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 115699934925592619}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: com.lastnightsmasks.player::LastNightsMasks.Player.CameraZoomController
   playerCamera: {fileID: 8354387622068796585}
+  playerRenderer: {fileID: 0}
   defaultFOV: 60
   zoomedFOV: 40
   zoomDuration: 0.3
@@ -276,11 +277,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.player::LastNightsMasks.Player.PlayerInteractionController
   playerCamera: {fileID: 8354387622068796585}
   interactPromptUI: {fileID: 0}
-  cameraZoomController: {fileID: 0}
+  dialogueRunner: {fileID: 0}
+  dialogue:
+    project: {fileID: 0}
+    nodeName: 
+  cameraZoom: {fileID: 7431163287414695594}
   maxLookDistance: 10
   interactableLayer:
     serializedVersion: 2
     m_Bits: 0
+  showDebugRay: 1
+  debugRayColorHit: {r: 0, g: 1, b: 0, a: 1}
+  debugRayColorMiss: {r: 1, g: 0, b: 0, a: 1}
   debugList: []
 --- !u!1 &8993339288850932476
 GameObject:
@@ -293,7 +301,7 @@ GameObject:
   - component: {fileID: 2098094615428949082}
   - component: {fileID: 5447697168863478267}
   - component: {fileID: 3459519610314289967}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,13 +316,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8993339288850932476}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -1, z: -0.6}
+  m_LocalScale: {x: 120, y: 120, z: 120}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4619217967752219647}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &5447697168863478267
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -322,7 +330,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8993339288850932476}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -1550514412580984892, guid: f10340f6831bbd04f9af4a7e3b425873, type: 3}
 --- !u!23 &3459519610314289967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -331,7 +339,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8993339288850932476}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 3
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0

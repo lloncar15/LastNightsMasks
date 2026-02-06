@@ -1,7 +1,9 @@
 using System;
+using System.Threading.Tasks;
 using UnityEngine;
 using DG.Tweening;
 using LastNightsMasks.Interactable;
+using UnityEngine.Rendering;
 
 namespace LastNightsMasks.Player {
     /// <summary>
@@ -11,6 +13,7 @@ namespace LastNightsMasks.Player {
     public class CameraZoomController : MonoBehaviour {
         [Header("References")]
         [SerializeField] private Camera playerCamera;
+        [SerializeField] private Renderer playerRenderer;
 
         [Header("Settings")]
         [SerializeField] private float defaultFOV = 60f;
@@ -94,6 +97,44 @@ namespace LastNightsMasks.Player {
             _rotationTween = playerCamera.transform
                 .DOLocalRotateQuaternion(_originalLocalRotation, zoomDuration)
                 .SetEase(zoomEase);
+        }
+
+        public async Task OnEndGameRotation() {
+            Transform cam = playerCamera.transform;
+            Vector3 startPos = cam.position;
+            Quaternion startRot = cam.rotation;
+            
+            Vector3 endPos = startPos + cam.forward * 2f + cam.right * 1.5f + Vector3.up * 1f;
+            Quaternion endRot = Quaternion.Euler(20f, cam.eulerAngles.y + 220f, 0);
+            
+            float duration = 1.5f;
+            float elapsed = 0f;
+
+            bool addedRabbitToMask = false;
+            float durationHalved = duration / 2;
+            
+            while (elapsed < duration) {
+                elapsed += Time.deltaTime;
+                float t = elapsed / duration;
+                float smoothT = t * t * (3f - 2f * t);
+
+                if (!addedRabbitToMask && elapsed >= durationHalved) {
+                    addedRabbitToMask = true;
+                    MakeRabbitVisible();
+                }
+        
+                cam.position = Vector3.Lerp(startPos, endPos, smoothT);
+                cam.rotation = Quaternion.Slerp(startRot, endRot, smoothT);
+        
+                await Task.Yield();
+            }
+            
+            cam.position = endPos;
+            cam.rotation = endRot;
+        }
+
+        private void MakeRabbitVisible() {
+            playerRenderer.shadowCastingMode = ShadowCastingMode.On;
         }
     }
 }
