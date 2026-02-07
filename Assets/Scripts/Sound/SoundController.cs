@@ -58,6 +58,13 @@ namespace LastNightsMasks.Sound {
             sfxSource.PlayOneShot(clip);
         }
 
+        public void PlaySound(AudioClip clip, float volumeMultiplier) {
+            if (clip == null)
+                return;
+            
+            sfxSource.PlayOneShot(clip, volumeMultiplier * GetSFXVolume());
+        }
+
         public void PlaySound(AudioSource source, AudioClip clip, float volumeMultiplier) {
             if (source == null || clip == null)
                 return;

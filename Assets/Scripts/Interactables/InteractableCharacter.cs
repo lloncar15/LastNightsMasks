@@ -1,6 +1,7 @@
 using System.Threading;
 using UnityEngine;
 using LastNightsMasks.Input;
+using LastNightsMasks.Sound;
 using Yarn.Unity;
 
 namespace LastNightsMasks.Interactable {
@@ -25,10 +26,11 @@ namespace LastNightsMasks.Interactable {
             }
         }
 
-        public async override void Interact() {
+        public async override void Interact(Transform interactingTransform) {
             if (!IsBeingLookedAt)
                 return;
             
+            SoundController.Instance.PlaySound(interactSound, volume);
             InputController.Instance.SwitchToInputMode(InputMode.Interact);
             InteractedWithObject?.Invoke(lookAtPoint);
 
@@ -60,9 +62,6 @@ namespace LastNightsMasks.Interactable {
             }
 
             await dialogueRunner.StartDialogue(dialogue.nodeName);
-
-            CancellationToken destroyCancellation = destroyCancellationToken;
-
             await dialogueRunner.DialogueTask;
         }
 

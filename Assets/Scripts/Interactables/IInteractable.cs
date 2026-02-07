@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace LastNightsMasks.Interactable {
     public interface IInteractable {
-        void Interact();
+        void Interact(Transform interactingTransform);
         
         /// <summary>
         /// Called when the player looks at this object while in range

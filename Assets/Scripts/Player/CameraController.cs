@@ -37,11 +37,13 @@ namespace LastNightsMasks.Player {
         private void OnEnable() {
             InteractableObject.InteractedWithObject += InteractedWithObject;
             InteractableObject.FinishedInteractingWithObject += FinishedInteractingWithObject;
+            InteractableItemSpawner.LookAtItem += LookAt;
         }
         
         private void OnDisable() {
             InteractableObject.InteractedWithObject -= InteractedWithObject;
             InteractableObject.FinishedInteractingWithObject -= FinishedInteractingWithObject;
+            InteractableItemSpawner.LookAtItem += LookAt;
         }
 
         private void InteractedWithObject(Transform trans) {
@@ -56,6 +58,16 @@ namespace LastNightsMasks.Player {
             // Clean up tweens when destroyed
             _fovTween?.Kill();
             _rotationTween?.Kill();
+        }
+
+        public void LookAt(Vector3 targetPoint, float duration, Ease ease) {
+            _rotationTween?.Kill();
+
+            Quaternion targetRotation = Quaternion.LookRotation(targetPoint - playerCamera.transform.position);
+            
+            _rotationTween = playerCamera.transform
+                .DORotateQuaternion(targetRotation, duration)
+                .SetEase(ease);
         }
 
         /// <summary>

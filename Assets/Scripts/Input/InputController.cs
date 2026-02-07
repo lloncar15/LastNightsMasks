@@ -139,18 +139,22 @@ namespace LastNightsMasks.Input {
 
         #endregion
         
-        public void SwitchToInputMode(InputMode mode) {
+        public void SwitchToInputMode(InputMode mode, bool shouldChangeLockMode = true) {
             switch (mode) {
                 case InputMode.General: {
                     EnableGeneralInput();
                     DisableInteractInputs();
-                    SwitchCursorLockMode(CursorLockMode.Locked);
+                    if (shouldChangeLockMode) {
+                        SwitchCursorLockMode(CursorLockMode.Locked);
+                    }
                     break;
                 }
                 case InputMode.Interact: {
                     DisableGeneralInput();
                     EnableInteractInputs();
-                    SwitchCursorLockMode(CursorLockMode.None);
+                    if (shouldChangeLockMode) {
+                        SwitchCursorLockMode(CursorLockMode.None);
+                    }
                     break;
                 }
             }

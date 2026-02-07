@@ -14,6 +14,7 @@ namespace LastNightsMasks.Player {
         [SerializeField] private AudioClip[] footstepsClips;
         [SerializeField] private float stepInterval = 0.4f;
         [SerializeField] private Vector2 pitchRange = new(0.9f, 1.1f);
+        [SerializeField] private float volume = 1.1f;
         
         private CharacterController _characterController;
         private float _verticalVelocity;
@@ -72,7 +73,7 @@ namespace LastNightsMasks.Player {
 
         private void PlayFootstep() {
             footstepsSource.pitch = Random.Range(pitchRange.x, pitchRange.y);
-            SoundController.Instance.PlaySound(footstepsSource, footstepsClips[_currentFootsteps]);
+            SoundController.Instance.PlaySound(footstepsSource, footstepsClips[_currentFootsteps], volume);
             _currentFootsteps = (_currentFootsteps +1) % footstepsClips.Length;
         }
     }

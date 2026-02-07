@@ -2069,6 +2069,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2958262987206614838, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262987206614838, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7262066351540048079, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_Name
       value: Dialogue System
@@ -2149,6 +2157,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8020628925673895294, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020628925673895294, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: autoStart
       value: 1
@@ -2191,108 +2207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610c541718d694070a21327d1ae62e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &528716023 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7109354299647852990, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
-  m_PrefabInstance: {fileID: 1844985507741888833}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &528716028
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528716023}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &529739461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2724,8 +2638,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableItemSpawner
   lookAtPoint: {fileID: 0}
   itemDropToActivate: {fileID: 1285772599}
+  interactSound: {fileID: 8300000, guid: d504e910ecd604c78aae9643ad0e29f8, type: 3}
+  volume: 0.6
   variableStorage: {fileID: 520517270}
   unlockVariableName: $talkedToBebe
+  lookAtDropItemDuration: 0.4
 --- !u!1 &585874652
 GameObject:
   m_ObjectHideFlags: 0
@@ -3967,8 +3884,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableItemSpawner
   lookAtPoint: {fileID: 0}
   itemDropToActivate: {fileID: 1166029043}
+  interactSound: {fileID: 8300000, guid: d504e910ecd604c78aae9643ad0e29f8, type: 3}
+  volume: 0.6
   variableStorage: {fileID: 520517270}
   unlockVariableName: $talkedToGhosty
+  lookAtDropItemDuration: 0.4
 --- !u!1001 &961842189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5478,6 +5398,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableCharacter
   lookAtPoint: {fileID: 118755322}
   itemDropToActivate: {fileID: 0}
+  interactSound: {fileID: 8300000, guid: d504e910ecd604c78aae9643ad0e29f8, type: 3}
+  volume: 0.6
   dialogue:
     project: {fileID: 7545569452688597077, guid: c9d1b38366576494c95b057989f8d060, type: 3}
     nodeName: Ghosty
@@ -6027,6 +5949,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableCharacter
   lookAtPoint: {fileID: 1747002307}
   itemDropToActivate: {fileID: 0}
+  interactSound: {fileID: 8300000, guid: d504e910ecd604c78aae9643ad0e29f8, type: 3}
+  volume: 0.6
   dialogue:
     project: {fileID: 7545569452688597077, guid: c9d1b38366576494c95b057989f8d060, type: 3}
     nodeName: Magician
@@ -6880,8 +6804,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableItemSpawner
   lookAtPoint: {fileID: 0}
   itemDropToActivate: {fileID: 1954336924}
+  interactSound: {fileID: 8300000, guid: d504e910ecd604c78aae9643ad0e29f8, type: 3}
+  volume: 0.6
   variableStorage: {fileID: 520517270}
   unlockVariableName: $talkedToDolores
+  lookAtDropItemDuration: 0.4
 --- !u!1001 &1547416721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7083,6 +7010,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableCharacter
   lookAtPoint: {fileID: 1640169707}
   itemDropToActivate: {fileID: 0}
+  interactSound: {fileID: 8300000, guid: d504e910ecd604c78aae9643ad0e29f8, type: 3}
+  volume: 0.6
   dialogue:
     project: {fileID: 7545569452688597077, guid: c9d1b38366576494c95b057989f8d060, type: 3}
     nodeName: Dolores
@@ -8482,8 +8411,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableItemSpawner
   lookAtPoint: {fileID: 0}
   itemDropToActivate: {fileID: 1912108077}
+  interactSound: {fileID: 8300000, guid: d504e910ecd604c78aae9643ad0e29f8, type: 3}
+  volume: 0.6
   variableStorage: {fileID: 520517270}
   unlockVariableName: $talkedToMagician
+  lookAtDropItemDuration: 0.4
 --- !u!1001 &1834502248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8691,6 +8623,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableCharacter
   lookAtPoint: {fileID: 1287165214}
   itemDropToActivate: {fileID: 0}
+  interactSound: {fileID: 8300000, guid: d504e910ecd604c78aae9643ad0e29f8, type: 3}
+  volume: 0.6
   dialogue:
     project: {fileID: 7545569452688597077, guid: c9d1b38366576494c95b057989f8d060, type: 3}
     nodeName: Bebe
@@ -10277,9 +10211,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7109354299647852990, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 528716028}
     - targetCorrespondingSourceObject: {fileID: 634204738307482411, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 330716871}

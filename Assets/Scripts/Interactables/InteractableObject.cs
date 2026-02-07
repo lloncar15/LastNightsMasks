@@ -1,5 +1,6 @@
 using System;
 using LastNightsMasks.Items;
+using LastNightsMasks.Sound;
 using UnityEngine;
 
 namespace LastNightsMasks.Interactable {
@@ -7,6 +8,8 @@ namespace LastNightsMasks.Interactable {
     public class InteractableObject : MonoBehaviour, IInteractable {
         [SerializeField] protected Transform lookAtPoint;
         [SerializeField] protected ItemDrop itemDropToActivate;
+        [SerializeField] protected AudioClip interactSound;
+        [SerializeField] protected float volume = 0.6f;
         
         protected bool HasAlreadyBeenInteracted;
         protected bool IsBeingLookedAt;
@@ -15,12 +18,14 @@ namespace LastNightsMasks.Interactable {
         public static Action<Transform> InteractedWithObject;
         public static Action FinishedInteractingWithObject;
 
-        public virtual void Interact() {
+        public virtual void Interact(Transform interactingTransform) {
             if (!IsBeingLookedAt)
                 return;
             
             HasAlreadyBeenInteracted = true;
             IsBeingLookedAt = false;
+            
+            SoundController.Instance.PlaySound(interactSound, volume);
         }
         
         public void OnHoverEnter() {

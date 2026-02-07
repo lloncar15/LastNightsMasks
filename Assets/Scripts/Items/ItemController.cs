@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
+using LastNightsMasks.Sound;
 using LastNightsMasks.Utils;
+using UnityEngine;
 
 namespace LastNightsMasks.Items {
     public class ItemController : GenericSingleton<ItemController> {
+        [SerializeField] private AudioClip allItemsCollectedSound;
         public static event Action<ItemData> OnItemCollected;
 
         private HashSet<int> _collectedItemIds = new();
@@ -31,6 +34,7 @@ namespace LastNightsMasks.Items {
             OnItemCollected?.Invoke(item);
 
             if (_collectedItems.Count == MAX_ITEMS) {
+                SoundController.Instance.PlaySound(allItemsCollectedSound);
                 OnAllItemsCollected?.Invoke();
             }
         }

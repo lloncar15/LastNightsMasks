@@ -159,7 +159,7 @@ namespace LastNightsMasks.Player {
         }
 
         private void TryToInteract() {
-            _currentTarget?.Interact();
+            _currentTarget?.Interact(this.transform);
         }
 
         #region Helpers
