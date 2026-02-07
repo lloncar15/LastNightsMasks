@@ -13,7 +13,7 @@ namespace LastNightsMasks.Player {
         [SerializeField] private AudioSource footstepsSource;
         [SerializeField] private AudioClip[] footstepsClips;
         [SerializeField] private float stepInterval = 0.4f;
-        [SerializeField] private Vector2 pitchRange = new Vector2(0.9f, 1.1f);
+        [SerializeField] private Vector2 pitchRange = new(0.9f, 1.1f);
         
         private CharacterController _characterController;
         private float _verticalVelocity;

@@ -1997,6 +1997,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2958262985454349548, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: eventHandlers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262985454349548, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: 'eventHandlers.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1844985507741888834}
     - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_Type
       value: 1
@@ -9121,7 +9129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ea717efd4e4220245b772479fc8df4d5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9180,7 +9188,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.04
+  m_Radius: 0.045
   m_Center: {x: -0.00030397807, y: -0.001254372, z: 0.0027296806}
 --- !u!1001 &1963539703
 PrefabInstance:
@@ -10276,6 +10284,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 330716871}
   m_SourcePrefab: {fileID: 100100000, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
+--- !u!114 &1844985507741888834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9005563761453878307, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
+  m_PrefabInstance: {fileID: 1844985507741888833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8517b922f7427b8b059bda29032990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.sound::LastNightsMasks.Sound.TypewriterSoundEmitter
 --- !u!1001 &1897601566710514666
 PrefabInstance:
   m_ObjectHideFlags: 0
