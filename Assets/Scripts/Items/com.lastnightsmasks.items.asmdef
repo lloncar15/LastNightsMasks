@@ -2,7 +2,8 @@
     "name": "com.lastnightsmasks.items",
     "rootNamespace": "",
     "references": [
-        "GUID:675c46534dbe448508e2da4aa561bbee"
+        "GUID:675c46534dbe448508e2da4aa561bbee",
+        "GUID:8d29cb09e67a00f44821892af0540d7a"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

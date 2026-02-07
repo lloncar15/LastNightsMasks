@@ -2,7 +2,7 @@ using LastNightsMasks.Utils;
 using UnityEngine;
 using Yarn.Unity;
 
-namespace LastNightsMasks.Player {
+namespace LastNightsMasks.Sound {
     public class SoundController : PersistentSingleton<SoundController> {
         [Header("Audio Sources")]
         [SerializeField] public AudioSource musicSource;
@@ -47,6 +47,13 @@ namespace LastNightsMasks.Player {
 
             source.volume = GetSFXVolume();
             source.PlayOneShot(clip);
+        }
+
+        public void PlaySound(AudioClip clip) {
+            if (clip == null)
+                return;
+            
+            musicSource.PlayOneShot(clip);
         }
 
         public void PlaySound(AudioSource source, AudioClip clip, float volumeMultiplier) {

@@ -4602,6 +4602,8 @@ MonoBehaviour:
   itemData: {fileID: 11400000, guid: 0d7c273e0a88649f98db5d761d3656e3, type: 2}
   bounceHeight: 0.3
   bounceDuration: 1
+  itemUnlocked: {fileID: 8300000, guid: 4df6e49f335fc49468ab1a0b3b073350, type: 3}
+  itemPickup: {fileID: 8300000, guid: ef3b1178c6c6c7741a0ac8afb6fb9af4, type: 3}
 --- !u!135 &1166029046
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5667,6 +5669,8 @@ MonoBehaviour:
   itemData: {fileID: 11400000, guid: f135861b6a9ea4be981ad0313f27d21c, type: 2}
   bounceHeight: 0.3
   bounceDuration: 1
+  itemUnlocked: {fileID: 8300000, guid: 4df6e49f335fc49468ab1a0b3b073350, type: 3}
+  itemPickup: {fileID: 8300000, guid: ef3b1178c6c6c7741a0ac8afb6fb9af4, type: 3}
 --- !u!135 &1285772602
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8925,6 +8929,8 @@ MonoBehaviour:
   itemData: {fileID: 11400000, guid: 46a59ac33da994386bbaef40a20eb40d, type: 2}
   bounceHeight: 0.3
   bounceDuration: 1
+  itemUnlocked: {fileID: 8300000, guid: 4df6e49f335fc49468ab1a0b3b073350, type: 3}
+  itemPickup: {fileID: 8300000, guid: ef3b1178c6c6c7741a0ac8afb6fb9af4, type: 3}
 --- !u!135 &1912108080
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9050,6 +9056,8 @@ MonoBehaviour:
   itemData: {fileID: 11400000, guid: 0fa221df241574fd1adfa8638244f3be, type: 2}
   bounceHeight: 0.3
   bounceDuration: 1
+  itemUnlocked: {fileID: 8300000, guid: 4df6e49f335fc49468ab1a0b3b073350, type: 3}
+  itemPickup: {fileID: 8300000, guid: ef3b1178c6c6c7741a0ac8afb6fb9af4, type: 3}
 --- !u!135 &1954336927
 SphereCollider:
   m_ObjectHideFlags: 0
