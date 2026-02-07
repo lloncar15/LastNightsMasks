@@ -24,15 +24,11 @@ namespace LastNightsMasks.Items {
             StartBouncing();
         }
 
-        private void StartBouncing()
-        {
+        private void StartBouncing() {
             _bounceTween = transform.DOMoveY(_startPosition.y + bounceHeight, bounceDuration)
                 .SetEase(Ease.InOutQuad)
+                .SetLink(gameObject)
                 .SetLoops(-1, LoopType.Yoyo);
-        }
-
-        private void OnControllerColliderHit(ControllerColliderHit hit) {
-            // This is called on the player, not the item
         }
 
         private void OnTriggerEnter(Collider other) {
@@ -56,11 +52,8 @@ namespace LastNightsMasks.Items {
             
             transform.DOScale(Vector3.zero, 0.2f)
                 .SetEase(Ease.InBack)
+                .SetLink(gameObject)
                 .OnComplete(() => Destroy(gameObject));
-        }
-
-        private void OnDestroy() {
-            _bounceTween?.Kill();
         }
     }
 }

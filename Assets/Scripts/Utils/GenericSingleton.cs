@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace LastNightsMasks.Utils {
-    public class Singleton<T> : MonoBehaviour where T : Component {
+    public class GenericSingleton<T> : MonoBehaviour where T : Component {
         private static T _instance;
         public static bool HasInstance =>  _instance != null;
         

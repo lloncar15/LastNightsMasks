@@ -1,9 +1,10 @@
 using System;
+using LastNightsMasks.Utils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace LastNightsMasks.Input {
-    public class InputController : MonoBehaviour {
+    public class InputController : GenericSingleton<InputController> {
         [SerializeField] public InputMode currentInputMode = InputMode.General;
         
         private PlayerInputActions _inputActions;
@@ -11,38 +12,15 @@ namespace LastNightsMasks.Input {
         public Vector2 MoveInput {get; private set;}
         public Vector2 LookInput {get; private set;}
 
-        public event Action OnInteractPressed;
-        public event Action OnInteraction;
-        public event Action OnSettingsPressed;
+        public static event Action OnInteractPressed;
+        public static event Action OnInteraction;
+        public static event Action OnSettingsPressed;
 
         private bool _isUIInputEnabled = true;
-        
-        private static InputController _instance;
 
-        public static InputController Instance {
-            get {
-                if (_instance == null) {
-                    _instance = FindAnyObjectByType<InputController>();
-                    if (_instance == null) {
-                        GameObject go = new GameObject("InputController");
-                        _instance = go.AddComponent<InputController>();
-                    }
-                }
-
-                return _instance;
-            }
-        }
-
-        private void OnDestroy() {
-            if (_instance == this)
-                _instance = null;
-        }
-
-        private void Awake() {
-            if (!Application.isPlaying)
-                return;
-
-            _instance = this;
+        protected override void Awake() {
+            base.Awake();
+            
             _inputActions = new PlayerInputActions();
         }
 

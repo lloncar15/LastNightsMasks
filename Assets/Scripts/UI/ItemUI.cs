@@ -7,11 +7,11 @@ namespace LastNightsMasks.UI {
         [SerializeField] private Transform contentParent;
 
         private void OnEnable() {
-            ItemController.Instance.OnItemCollected += OnItemCollected;
+            ItemController.OnItemCollected += OnItemCollected;
         }
 
         private void OnDisable() {
-            ItemController.Instance.OnItemCollected -= OnItemCollected;
+            ItemController.OnItemCollected -= OnItemCollected;
         }
 
         private void OnItemCollected(ItemData item) {

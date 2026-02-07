@@ -2,7 +2,8 @@
     "name": "com.lastnightsmasks.input",
     "rootNamespace": "",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c"
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:675c46534dbe448508e2da4aa561bbee"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

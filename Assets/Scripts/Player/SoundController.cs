@@ -1,10 +1,9 @@
+using LastNightsMasks.Utils;
 using UnityEngine;
 using Yarn.Unity;
 
 namespace LastNightsMasks.Player {
-    public class SoundController : MonoBehaviour {
-        private static SoundController _instance;
-        
+    public class SoundController : PersistentSingleton<SoundController> {
         [Header("Audio Sources")]
         [SerializeField] public AudioSource musicSource;
 
@@ -13,33 +12,9 @@ namespace LastNightsMasks.Player {
         [Range(0f, 1f)] public float musicVolume = 1f;
         [Range(0f, 1f)] public float sfxVolume = 1f;
 
-        [Header("Music Fade Settings")]
-        [SerializeField] private float musicFadeDuration = 1f;
-
         [Header("Background Music")] 
         [SerializeField] private AudioClip backgroundMusic;
         [SerializeField] public AudioClip seen;
-        
-        public static SoundController Instance {
-            get {
-                if (_instance == null) {
-                    _instance = FindAnyObjectByType<SoundController>();
-                    if (_instance == null) {
-                        GameObject go = new GameObject("InputController");
-                        _instance = go.AddComponent<SoundController>();
-                    }
-                }
-
-                return _instance;
-            }
-        }
-        
-        private void Awake() {
-            if (!Application.isPlaying) 
-                return;
-
-            _instance = this;
-        }
         
         private void Start() {
             if (musicSource == null) 

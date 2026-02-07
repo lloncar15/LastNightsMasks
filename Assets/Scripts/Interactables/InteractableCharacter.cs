@@ -68,7 +68,6 @@ namespace LastNightsMasks.Interactable {
 
         [YarnCommand("interact")]
         public void YarnInteractEnded() {
-            Debug.Log($"{gameObject.name} has finished interaction");
             HasAlreadyBeenInteracted =  true;
             IsBeingLookedAt = false;
         }

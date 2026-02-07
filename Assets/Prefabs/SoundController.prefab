@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.player::LastNightsMasks.Player.SoundController
   musicSource: {fileID: 5930933037376187481}
   masterVolume: 1
-  musicVolume: 1
+  musicVolume: 0.6
   sfxVolume: 1
   musicFadeDuration: 1
   backgroundMusic: {fileID: 8300000, guid: 264217d240120445ea37b9227f8f5fbe, type: 3}

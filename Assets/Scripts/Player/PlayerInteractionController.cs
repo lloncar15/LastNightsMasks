@@ -13,7 +13,7 @@ namespace LastNightsMasks.Player {
         [SerializeField] private GameObject interactPromptUI;
         [SerializeField] private DialogueRunner  dialogueRunner;
         [SerializeField] private DialogueReference dialogue;
-        [SerializeField] private CameraZoomController cameraZoom;
+        [SerializeField] private CameraController cameraController;
 
         [Header("Settings")] 
         [SerializeField] private float maxLookDistance = 10f;
@@ -31,8 +31,8 @@ namespace LastNightsMasks.Player {
         private bool _isInteracting;
         
         private void OnEnable() {
-            InputController.Instance.OnInteractPressed += TryToInteract;
-            InputController.Instance.OnInteraction += OnInteraction;
+            InputController.OnInteractPressed += TryToInteract;
+            InputController.OnInteraction += OnInteraction;
             InteractableTrigger.OnPlayerEntered += RegisterNearbyInteractable;
             InteractableTrigger.OnPlayerExited += UnregisterNearbyInteractable;
             InteractableObject.InteractedWithObject += OnBeginInteraction;
@@ -41,8 +41,8 @@ namespace LastNightsMasks.Player {
         }
 
         private void OnDisable() {
-            InputController.Instance.OnInteractPressed -= TryToInteract;
-            InputController.Instance.OnInteraction -= OnInteraction;
+            InputController.OnInteractPressed -= TryToInteract;
+            InputController.OnInteraction -= OnInteraction;
             InteractableTrigger.OnPlayerEntered -= RegisterNearbyInteractable;
             InteractableTrigger.OnPlayerExited -= UnregisterNearbyInteractable;
             InteractableObject.InteractedWithObject -= OnBeginInteraction;
@@ -68,7 +68,7 @@ namespace LastNightsMasks.Player {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             
-            SceneTransition.Instance.LoadScene("MainMenuScene");
+            SceneTransitionController.Instance.LoadScene("MainMenuScene");
         }
 
         private void OnBeginInteraction(Transform _) {
@@ -196,8 +196,7 @@ namespace LastNightsMasks.Player {
         /// </summary>
         [YarnCommand("game_end_camera")]
         public async YarnTask CameraRotationAndGameEnd() {
-            
-            await cameraZoom.OnEndGameRotation();
+            await cameraController.OnEndGameRotation();
         }
 
         #endregion

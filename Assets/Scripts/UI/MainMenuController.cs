@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 namespace LastNightsMasks.UI {
     public class MainMenuController : MonoBehaviour {
         public void PlayButtonPressed() {
-            SceneTransition.Instance.LoadScene("World");
+            SceneTransitionController.Instance.LoadScene("World");
         }
 
         public void CreditsButtonPressed() {

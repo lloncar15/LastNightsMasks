@@ -1,3 +1,16 @@
 {
-	"name": "com.lastnightsmasks.items"
+    "name": "com.lastnightsmasks.items",
+    "rootNamespace": "",
+    "references": [
+        "GUID:675c46534dbe448508e2da4aa561bbee"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

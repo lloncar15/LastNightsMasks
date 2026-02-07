@@ -10,7 +10,7 @@ namespace LastNightsMasks.Player {
     /// Handles camera zoom effects by adjusting field of view.
     /// Use for focusing on objects, dialogue close-ups, etc.
     /// </summary>
-    public class CameraZoomController : MonoBehaviour {
+    public class CameraController : MonoBehaviour {
         [Header("References")]
         [SerializeField] private Camera playerCamera;
         [SerializeField] private Renderer playerRenderer;
