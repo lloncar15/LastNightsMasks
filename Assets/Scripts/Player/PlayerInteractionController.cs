@@ -65,8 +65,7 @@ namespace LastNightsMasks.Player {
             await dialogueRunner.StartDialogue(dialogue.nodeName);
             await dialogueRunner.DialogueTask;
             
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            InputController.Instance.SwitchCursorLockMode(CursorLockMode.None);
             
             SceneTransitionController.Instance.LoadScene("MainMenuScene");
         }
