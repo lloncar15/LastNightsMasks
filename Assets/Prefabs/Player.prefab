@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 3854722399892650873}
   - component: {fileID: 8055073818046895616}
   - component: {fileID: 1540898699380637114}
+  - component: {fileID: 8637284758349138855}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -263,6 +264,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.player::LastNightsMasks.Player.PlayerMovementController
   cameraHolder: {fileID: 8401254500365245250}
   playerConfig: {fileID: 11400000, guid: e04ca3e1bb29c4d179593860b34a9fe2, type: 2}
+  footstepsSource: {fileID: 8637284758349138855}
+  footstepsClips:
+  - {fileID: 8300000, guid: 8dfb7dcb19a40456b91cc409384437db, type: 3}
+  - {fileID: 8300000, guid: 7298faee032794852aa7608487eface6, type: 3}
+  stepInterval: 0.4
+  pitchRange: {x: 0.9, y: 1.1}
 --- !u!114 &1540898699380637114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +288,7 @@ MonoBehaviour:
   dialogue:
     project: {fileID: 0}
     nodeName: 
-  cameraZoom: {fileID: 7431163287414695594}
+  cameraController: {fileID: 0}
   maxLookDistance: 10
   interactableLayer:
     serializedVersion: 2
@@ -290,6 +297,103 @@ MonoBehaviour:
   debugRayColorHit: {r: 0, g: 1, b: 0, a: 1}
   debugRayColorMiss: {r: 1, g: 0, b: 0, a: 1}
   debugList: []
+--- !u!82 &8637284758349138855
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7109354299647852990}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8993339288850932476
 GameObject:
   m_ObjectHideFlags: 0
