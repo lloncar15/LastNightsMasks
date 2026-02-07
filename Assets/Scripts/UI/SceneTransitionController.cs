@@ -1,13 +1,23 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using LastNightsMasks.Input;
 using LastNightsMasks.Utils;
 
 namespace LastNightsMasks.UI {
     public class SceneTransitionController : PersistentSingleton<SceneTransitionController> {
         [SerializeField] private Image blackCircle;
         [SerializeField] private float transitionDuration = 0.8f;
+
+        private void OnEnable() {
+            InputController.OnRestartPressed += Restart;
+        }
+
+        private void OnDisable() {
+            InputController.OnRestartPressed -= Restart;
+        }
 
         private void Start() {
             blackCircle.transform.localScale = Vector3.zero;
@@ -26,6 +36,10 @@ namespace LastNightsMasks.UI {
         private void CloseTransition() {
             blackCircle.transform.DOScale(Vector3.zero, transitionDuration)
                 .SetEase(Ease.InOutQuad);
+        }
+
+        private void Restart() {
+            LoadScene("MainMenuScene");
         }
     }
 }

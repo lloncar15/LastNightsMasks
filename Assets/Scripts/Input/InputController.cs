@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace LastNightsMasks.Input {
-    public class InputController : GenericSingleton<InputController> {
+    public class InputController : PersistentSingleton<InputController> {
         [SerializeField] public InputMode currentInputMode = InputMode.General;
         
         private PlayerInputActions _inputActions;
@@ -15,6 +15,7 @@ namespace LastNightsMasks.Input {
         public static event Action OnInteractPressed;
         public static event Action OnInteraction;
         public static event Action OnSettingsPressed;
+        public static event Action OnRestartPressed;
 
         private bool _isUIInputEnabled = true;
 
@@ -29,17 +30,18 @@ namespace LastNightsMasks.Input {
         }
 
         private void OnEnable() {
-            SwitchToInputMode(InputMode.General);
             _inputActions.UI.Enable();
             _inputActions.General.Interact.performed += HandleGeneralInteract;
             _inputActions.Interact.Interact.performed += HandleInteracted;
             _inputActions.UI.Settings.performed += HandleSettings;
+            _inputActions.UI.Restart.performed += HandleRestart;
         }
 
         private void OnDisable() {
             _inputActions.General.Interact.performed -= HandleGeneralInteract;
             _inputActions.Interact.Interact.performed -= HandleInteracted;
             _inputActions.UI.Settings.performed -= HandleSettings;
+            _inputActions.UI.Restart.performed -= HandleRestart;
             _inputActions.Disable();
         }
 
@@ -92,6 +94,14 @@ namespace LastNightsMasks.Input {
                 return;
             
             OnSettingsPressed?.Invoke();
+        }
+
+        private void HandleRestart(InputAction.CallbackContext context) {
+            if (!_isUIInputEnabled)
+                return;
+            
+            SwitchCursorLockMode(CursorLockMode.None);
+            OnRestartPressed?.Invoke();
         }
 
         public void EnableUIInputs() {
@@ -148,7 +158,7 @@ namespace LastNightsMasks.Input {
             currentInputMode = mode;
         }
 
-        private void SwitchCursorLockMode(CursorLockMode mode) {
+        public void SwitchCursorLockMode(CursorLockMode mode) {
             Cursor.lockState = mode;
             Cursor.visible = mode != CursorLockMode.Locked;
         }

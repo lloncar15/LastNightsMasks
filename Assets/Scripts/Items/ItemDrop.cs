@@ -1,5 +1,5 @@
-using System;
 using DG.Tweening;
+using LastNightsMasks.Sound;
 using UnityEngine;
 
 namespace LastNightsMasks.Items {
@@ -7,24 +7,26 @@ namespace LastNightsMasks.Items {
         [SerializeField] private ItemData itemData;
         [SerializeField] private float bounceHeight = 0.3f;
         [SerializeField] private float bounceDuration = 1f;
-
+        [SerializeField] private AudioClip itemUnlocked;
+        [SerializeField] private AudioClip itemPickup;
+        
         private Vector3 _startPosition;
         private Tween _bounceTween;
         private bool _isCollected;
-
-        public static Action<ItemData> OnItemPickup;
         
         public void Appear() {
             _startPosition = transform.position;
             gameObject.SetActive(true);
             StartBouncing();
         }
-
+        
         public void Start() {
             StartBouncing();
         }
 
         private void StartBouncing() {
+            SoundController.Instance.PlaySound(itemUnlocked);
+            
             _bounceTween = transform.DOMoveY(_startPosition.y + bounceHeight, bounceDuration)
                 .SetEase(Ease.InOutQuad)
                 .SetLink(gameObject)
@@ -49,6 +51,7 @@ namespace LastNightsMasks.Items {
             _bounceTween?.Kill();
 
             ItemController.Instance.CollectItem(itemData);
+            SoundController.Instance.PlaySound(itemPickup);
             
             transform.DOScale(Vector3.zero, 0.2f)
                 .SetEase(Ease.InBack)
