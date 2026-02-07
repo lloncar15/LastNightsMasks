@@ -561,7 +561,7 @@ PrefabInstance:
       addedObject: {fileID: 1803143623}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bcdf048364d339458f4e1edac54f021, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1803143622}
+      addedObject: {fileID: 1803143625}
   m_SourcePrefab: {fileID: 100100000, guid: 8bcdf048364d339458f4e1edac54f021, type: 3}
 --- !u!1 &75482274
 GameObject:
@@ -1419,7 +1419,7 @@ PrefabInstance:
       addedObject: {fileID: 886364434}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 564941982deb72944bdf45acd8a930fe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 886364433}
+      addedObject: {fileID: 886364436}
   m_SourcePrefab: {fileID: 100100000, guid: 564941982deb72944bdf45acd8a930fe, type: 3}
 --- !u!4 &378372995 stripped
 Transform:
@@ -1978,6 +1978,18 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2958262986446477831, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_Color.a
+      value: 0.53333336
+      objectReference: {fileID: 0}
     - target: {fileID: 2958262986520364887, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2001,6 +2013,10 @@ PrefabInstance:
     - target: {fileID: 2958262986520364887, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958262987206614836, guid: 52571f68872914e24837210513edea1d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2958262987206614837, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2127,6 +2143,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &520517270 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8635081094713202853, guid: 52571f68872914e24837210513edea1d, type: 3}
+  m_PrefabInstance: {fileID: 520517268}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610c541718d694070a21327d1ae62e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &528716023 stripped
@@ -2546,7 +2573,7 @@ PrefabInstance:
       addedObject: {fileID: 578682400}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f10340f6831bbd04f9af4a7e3b425873, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 578682399}
+      addedObject: {fileID: 578682402}
   m_SourcePrefab: {fileID: 100100000, guid: f10340f6831bbd04f9af4a7e3b425873, type: 3}
 --- !u!4 &578682397 stripped
 Transform:
@@ -2558,20 +2585,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f10340f6831bbd04f9af4a7e3b425873, type: 3}
   m_PrefabInstance: {fileID: 578682396}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &578682399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578682398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09988c7c193d4df0bce212a456b1f9f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableObject
-  lookAtPoint: {fileID: 0}
-  itemDropToActivate: {fileID: 1285772599}
 --- !u!114 &578682400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2605,6 +2618,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.04, y: 0.03, z: 0.04}
   m_Center: {x: 0, y: -0.01, z: 0}
+--- !u!114 &578682402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578682398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316ace0a1bcd41ebb0da2eed27fa17e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableItemSpawner
+  lookAtPoint: {fileID: 0}
+  itemDropToActivate: {fileID: 1285772599}
+  variableStorage: {fileID: 520517270}
+  unlockVariableName: $talkedToBebe
 --- !u!1 &585874652
 GameObject:
   m_ObjectHideFlags: 0
@@ -3770,20 +3799,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 564941982deb72944bdf45acd8a930fe, type: 3}
   m_PrefabInstance: {fileID: 378372994}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &886364433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886364430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09988c7c193d4df0bce212a456b1f9f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableObject
-  lookAtPoint: {fileID: 0}
-  itemDropToActivate: {fileID: 1166029043}
 --- !u!114 &886364434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3817,6 +3832,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.05, y: 0.06, z: 0.05}
   m_Center: {x: 0, y: 0.01, z: 0.02}
+--- !u!114 &886364436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886364430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316ace0a1bcd41ebb0da2eed27fa17e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableItemSpawner
+  lookAtPoint: {fileID: 0}
+  itemDropToActivate: {fileID: 1166029043}
+  variableStorage: {fileID: 520517270}
+  unlockVariableName: $talkedToGhosty
 --- !u!1001 &961842189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6601,27 +6632,13 @@ PrefabInstance:
       addedObject: {fileID: 1546061672}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1e4e33e4e4d2554fb462f57b9d91e3d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1546061671}
+      addedObject: {fileID: 1546061674}
   m_SourcePrefab: {fileID: 100100000, guid: d1e4e33e4e4d2554fb462f57b9d91e3d, type: 3}
 --- !u!4 &1546061668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d1e4e33e4e4d2554fb462f57b9d91e3d, type: 3}
   m_PrefabInstance: {fileID: 1546061667}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1546061671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348467087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09988c7c193d4df0bce212a456b1f9f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableObject
-  lookAtPoint: {fileID: 0}
-  itemDropToActivate: {fileID: 1954336924}
 --- !u!114 &1546061672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6655,6 +6672,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.03, y: 0.04, z: 0.02}
   m_Center: {x: -0.005, y: 0, z: 0.005}
+--- !u!114 &1546061674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348467087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316ace0a1bcd41ebb0da2eed27fa17e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableItemSpawner
+  lookAtPoint: {fileID: 0}
+  itemDropToActivate: {fileID: 1954336924}
+  variableStorage: {fileID: 520517270}
+  unlockVariableName: $talkedToDolores
 --- !u!1001 &1547416721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7539,7 +7572,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 100}
+  m_SizeDelta: {x: 400, y: 70}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1741037036
 MonoBehaviour:
@@ -7561,8 +7594,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8093,8 +8126,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8151,20 +8184,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bcdf048364d339458f4e1edac54f021, type: 3}
   m_PrefabInstance: {fileID: 74399530}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1803143622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803143619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09988c7c193d4df0bce212a456b1f9f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableObject
-  lookAtPoint: {fileID: 0}
-  itemDropToActivate: {fileID: 1912108077}
 --- !u!114 &1803143623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8198,6 +8217,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6, y: 0.5, z: 0.021468813}
   m_Center: {x: -0.00038439033, y: -0.00038100773, z: 0.010490603}
+--- !u!114 &1803143625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803143619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316ace0a1bcd41ebb0da2eed27fa17e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.interactable::LastNightsMasks.Interactable.InteractableItemSpawner
+  lookAtPoint: {fileID: 0}
+  itemDropToActivate: {fileID: 1912108077}
+  variableStorage: {fileID: 520517270}
+  unlockVariableName: $talkedToMagician
 --- !u!1001 &1834502248
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using LastNightsMasks.Input;
 using LastNightsMasks.Items;
 using UnityEngine;
 
@@ -9,37 +7,36 @@ namespace LastNightsMasks.Interactable {
     public class InteractableObject : MonoBehaviour, IInteractable {
         [SerializeField] protected Transform lookAtPoint;
         [SerializeField] protected ItemDrop itemDropToActivate;
-        protected bool hasAlreadyBeenInteracted;
-        protected bool isBeingLookedAt;
+        
+        protected bool HasAlreadyBeenInteracted;
+        protected bool IsBeingLookedAt;
         private bool _canBeInteracted;
 
         public static Action<Transform> InteractedWithObject;
         public static Action FinishedInteractingWithObject;
 
         public virtual void Interact() {
-            if (!isBeingLookedAt)
+            if (!IsBeingLookedAt)
                 return;
             
-            hasAlreadyBeenInteracted = true;
-            isBeingLookedAt = false;
-            
-            ItemController.Instance.ItemDropToActivate(itemDropToActivate);
+            HasAlreadyBeenInteracted = true;
+            IsBeingLookedAt = false;
         }
         
         public void OnHoverEnter() {
             if (!CanInteract())
                 return;
 
-            isBeingLookedAt = true;
+            IsBeingLookedAt = true;
         }
         public void OnHoverExit() {
             if (!CanInteract())
                 return;
 
-            isBeingLookedAt = false;
+            IsBeingLookedAt = false;
         }
         public void OnRangeEnter() {
-            if (hasAlreadyBeenInteracted)
+            if (HasAlreadyBeenInteracted)
                 return;
             
             _canBeInteracted = true;
@@ -50,8 +47,8 @@ namespace LastNightsMasks.Interactable {
 
         public Transform Transform => transform;
 
-        public bool CanInteract() {
-            return _canBeInteracted && !hasAlreadyBeenInteracted;
+        public virtual bool CanInteract() {
+            return _canBeInteracted && !HasAlreadyBeenInteracted;
         }
     }
 }

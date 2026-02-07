@@ -26,7 +26,7 @@ namespace LastNightsMasks.Interactable {
         }
 
         public async override void Interact() {
-            if (!isBeingLookedAt)
+            if (!IsBeingLookedAt)
                 return;
             
             InputController.Instance.SwitchToInputMode(InputMode.Interact);
@@ -69,8 +69,8 @@ namespace LastNightsMasks.Interactable {
         [YarnCommand("interact")]
         public void YarnInteractEnded() {
             Debug.Log($"{gameObject.name} has finished interaction");
-            hasAlreadyBeenInteracted =  true;
-            isBeingLookedAt = false;
+            HasAlreadyBeenInteracted =  true;
+            IsBeingLookedAt = false;
         }
     }
 }

@@ -34,7 +34,8 @@ namespace LastNightsMasks.Input {
         }
 
         private void OnDestroy() {
-            Destroy(_instance);
+            if (_instance == this)
+                _instance = null;
         }
 
         private void Awake() {
