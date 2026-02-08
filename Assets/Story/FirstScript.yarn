@@ -48,7 +48,7 @@ position: 95,3
 ---
 <<declare $talkedToMagician = false>>
 Magician: Urgh... my head.
-Magician: Last night's party... was mad.
+Magician: Last night's party... was alot.
 -> Yeah, it was something. Have you seen my keys?
     Magician: Keys?
     Magician: What do you mean keys?
@@ -60,7 +60,8 @@ Magician: Last night's party... was mad.
         Magician: Do you want to play a game?
         -> Yes
             Magician: Go on, look under the bed. I left a surprise for you.
-            Magician: I tend to hide things when I don't know what to do with them, I guess.
+            Magician: I guess I tend to hide things...
+            Magician: when I don't know what to do with them.
             <<set $talkedToMagician = true>>
             <<interact Magician>>
         //Bed is triggered to claim magician hat
