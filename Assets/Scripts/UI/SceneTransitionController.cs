@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -9,7 +8,7 @@ using LastNightsMasks.Utils;
 namespace LastNightsMasks.UI {
     public class SceneTransitionController : PersistentSingleton<SceneTransitionController> {
         [SerializeField] private Image blackCircle;
-        [SerializeField] private float transitionDuration = 0.8f;
+        [SerializeField] private float transitionDuration = 0.4f;
 
         private void OnEnable() {
             InputController.OnRestartPressed += Restart;

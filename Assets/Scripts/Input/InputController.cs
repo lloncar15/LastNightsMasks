@@ -2,6 +2,7 @@ using System;
 using LastNightsMasks.Utils;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace LastNightsMasks.Input {
     public class InputController : PersistentSingleton<InputController> {
@@ -20,9 +21,12 @@ namespace LastNightsMasks.Input {
         private bool _isUIInputEnabled = true;
 
         protected override void Awake() {
+            _inputActions = new PlayerInputActions();
             base.Awake();
             
-            _inputActions = new PlayerInputActions();
+            if (_instance == this) {
+                SceneManager.sceneLoaded += OnSceneLoaded;
+            }
         }
 
         private void Start() {
@@ -38,11 +42,13 @@ namespace LastNightsMasks.Input {
         }
 
         private void OnDisable() {
-            _inputActions.General.Interact.performed -= HandleGeneralInteract;
-            _inputActions.Interact.Interact.performed -= HandleInteracted;
-            _inputActions.UI.Settings.performed -= HandleSettings;
-            _inputActions.UI.Restart.performed -= HandleRestart;
-            _inputActions.Disable();
+            if (_inputActions != null) {
+                _inputActions.General.Interact.performed -= HandleGeneralInteract;
+                _inputActions.Interact.Interact.performed -= HandleInteracted;
+                _inputActions.UI.Settings.performed -= HandleSettings;
+                _inputActions.UI.Restart.performed -= HandleRestart;
+                _inputActions.Disable();
+            }
         }
 
         private void Update() {
@@ -56,6 +62,11 @@ namespace LastNightsMasks.Input {
                     break;
                 }
             }
+        }
+
+        protected override void OnDestroy() {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            base.OnDestroy();
         }
 
         #region General Inputs
@@ -165,6 +176,10 @@ namespace LastNightsMasks.Input {
         public void SwitchCursorLockMode(CursorLockMode mode) {
             Cursor.lockState = mode;
             Cursor.visible = mode != CursorLockMode.Locked;
+        }
+
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+            SwitchToInputMode(InputMode.Interact);
         }
     }
 

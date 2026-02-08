@@ -1,3 +1,4 @@
+using LastNightsMasks.Sound;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,6 +21,10 @@ namespace LastNightsMasks.UI {
             UnityEditor.EditorApplication.isPlaying = false;
 #endif
             Application.Quit();
+        }
+
+        public void PlayMenuSound() {
+            SoundController.Instance.PlayMenuSound();
         }
     }
 }
