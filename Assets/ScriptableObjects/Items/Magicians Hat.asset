@@ -15,3 +15,4 @@ MonoBehaviour:
   itemName: Magicians hat
   itemText: You get a hat! You get a hat! Everyone gets a hat!
   itemId: 1
+  yarnId: $hat

@@ -6,5 +6,6 @@ namespace LastNightsMasks.Items {
         public string itemName;
         public string itemText;
         public int itemId;
+        public string yarnId;
     }
 }

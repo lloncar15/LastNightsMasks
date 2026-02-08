@@ -2,174 +2,157 @@
 position: -17,193
 ---
 <<declare $talkedToBebe = false>>
-Bebe: Have you seen my rabbit?
--> Yes
-    Bebe: Are you playing with me?
-    //Bebe walks away
--> No
-    Bebe: Hm.
-    Bebe: Can you find me if you'd see my rabbit?
-    -> Okay
-        Bebe: Thanks.
-        Bebe: My rabbit listens better than most people here.
-    -> Maybe
-        Bebe: Figures.
-        Bebe: Last night had a lot of maybes.
+<<declare $egg = false>>
+<<if !$talkedToBebe>>
+    Bebe: Have you seen my rabbit?
+    -> Yes
+        Bebe: Are you playing with me?
+        //Bebe walks away
     -> No
-        Bebe: Right.
-        Bebe: Pretty honest.
-        Bebe: That was rare last night.
-    -> Look closer
-        Bebe: ...I am.
-        Bebe: You see more when you stop staring.
-//Bebe walks away
-<<set $talkedToBebe = true>>
-<<interact Bebe>>
-// <<playsound "Have you seen my rabbit">>
-===
-
-//Variation 1 - Available after the collectible is unlocked
-title: BebeVar1
----
-Bebe: Everything was fine...
-Bebe: Then Ghosty brought out the veggies.
-Bebe: After that, people shifted from editing themselves.
-===
-
-title: BebeVar2
----
-Bebe: Strange, isn't it?
-Bebe: People think they hide things...
-Bebe: but they mostly hide from themselves.
+        Bebe: Hm.
+        Bebe: Can you find me if you'd see my rabbit?
+        -> Okay
+            Bebe: Thanks.
+            Bebe: My rabbit listens better than most people here.
+        -> Maybe
+            Bebe: Figures.
+            Bebe: Last night had a lot of maybes.
+        -> No
+            Bebe: Right.
+            Bebe: Pretty honest.
+            Bebe: That was rare last night.
+        -> Look closer
+            Bebe: ...I am.
+            Bebe: You see more when you stop staring.
+    <<set $talkedToBebe = true>>
+<<elseif !$egg>>
+    //Variation 1 - Available after the collectible is unlocked
+    Bebe: Everything was fine...
+    Bebe: Then Ghosty brought out the veggies.
+    Bebe: After that, people shifted from editing themselves.
+<<else>>
+    Bebe: Strange, isn't it?
+    Bebe: People think they hide things...
+    Bebe: but they mostly hide from themselves.
+<<endif>>
 ===
 
 title: Magician
 position: 95,3
 ---
 <<declare $talkedToMagician = false>>
-Magician: Urgh... my head.
-Magician: Last night was... a lot.
--> Yeah, it was something. Have you seen my keys?
-    Magician: Keys?
-    Magician: What do you mean keys?
-    -> You know keys... to open doors?
-        Magician: Hmm.
-        Magician: I'm not sure.
-        Magician: Doors are overrated anyway.
-        Magician: But...
-        Magician: Do you want to play a game?
-        -> Yes
-            Magician: Go on, look under the bed. I left a surprise for you.
-            Magician: I guess I tend to hide things...
-            Magician: when I don't know what to do with them.
-            <<set $talkedToMagician = true>>
-            <<interact Magician>>
-        //Bed is triggered to claim magician hat
-        -> No
-            Magician: Okay. Suit yourself.
-        //Magician walks away
-===
-
-title: MagicianVar1
----
-Magician: I invited Dolores last night.
-Magician: Thought it might help something settle...
-Magician: Guess I just moved things around instead.
-===
-
-title: MagicianVar2
----
-Magician: Funny thing about parties...
-Magician: People show up for one reason and leave because of another.
+<<declare $hat = false>>
+<<if !$talkedToMagician>>
+    Magician: Urgh... my head.
+    Magician: Last night was... a lot.
+    -> Yeah, it was something. Have you seen my keys?
+        Magician: Keys?
+        Magician: What do you mean keys?
+        -> You know keys... to open doors?
+            Magician: Hmm.
+            Magician: I'm not sure.
+            Magician: Doors are overrated anyway.
+            Magician: But...
+            Magician: Do you want to play a game?
+            -> Yes
+                Magician: Go on, look under the bed. I left a surprise for you.
+                Magician: I guess I tend to hide things...
+                Magician: when I don't know what to do with them.
+                <<set $talkedToMagician = true>>
+                <<interact Magician>>
+            //Bed is triggered to claim magician hat
+            -> No
+                Magician: Okay. Suit yourself.
+            //Magician walks away
+<<elseif !$hat>>
+    Magician: I invited Dolores last night.
+    Magician: Thought it might help something settle...
+    Magician: Guess I just moved things around instead.
+<<else>>
+    Magician: Funny thing about parties...
+    Magician: People show up for one reason and leave because of another.
+<<endif>>
 ===
 
 title: Ghosty
 position: -240,3
 ---
 <<declare $talkedToGhosty = false>>
-Ghosty: Ohhh... I feel so alive today.
-Ghosty: Mornings after parties always feel brighter.
--> You look good. What's your secret?
-    Ghosty: I eat a lot of veggies. 
-    Ghosty: Like A LOT.
-     -> Sounds trippy.
-     Ghosty: You should try it sometime.
-     <<set $talkedToGhosty = true>>
-     <<interact Ghosty>>
-     //Mushroom chair is triggered to claim mushroom
--> I need to go home. Have you seen my keys?
-    Ghosty: Do I look like a lost-and-found?
-    Ghosty: Happens every time I host.
-===
-
-title: GhostyVar1
----
-Ghosty: I love hosting.
-Ghosty: People relax... forget their lines.
-Ghosty: Not my fault if the truth shows up early.
-===
-
-title: GhostyVar2
----
-Ghosty: People think parties are about music.
-Ghosty: I think they're about permission.
+<<declare $shroom = false>>
+<<if !$talkedToGhosty>>
+    Ghosty: Ohhh... I feel so alive today.
+    Ghosty: Mornings after parties always feel brighter.
+    -> You look good. What's your secret?
+        Ghosty: I eat a lot of veggies. 
+        Ghosty: Like A LOT.
+        -> Sounds trippy.
+        Ghosty: You should try it sometime.
+        <<set $talkedToGhosty = true>>
+        //Mushroom chair is triggered to claim mushroom
+    -> I need to go home. Have you seen my keys?
+        Ghosty: Do I look like a lost-and-found?
+        Ghosty: Happens every time I host.
+<<elseif !$shroom>>
+    Ghosty: I love hosting.
+    Ghosty: People relax... forget their lines.
+    Ghosty: Not my fault if the truth shows up early.
+<<else>>
+    Ghosty: People think parties are about music.
+    Ghosty: I think they're about permission.
+<<endif>>
 ===
 
 title: Dolores
 position: 146,-221
 ---
 <<declare $talkedToDolores = false>>
-Dolores: ...
--> Wow, Dolores. You survived last night!
-Dolores: You say. 
-Dolores: I still feel like I'm in the wrong version of the morning.
-Dolores: Do I look like a bird to you...?
--> Uhh, I don't know.
-Dolores: Anyways, always same ... 
-Dolores: All that aside, why do you always call me when you're high?
-    -> I didn't call you. You were here when I arrived yesterday.
-    Dolores: Are you high? Do you even listen to what I'm saying?
-    Dolores: Because I remember being called.
-    -> Can you just tell me where my keys are?
-    Dolores: Don't worry, I'll help you find your keys. Come here. 
-    //Dolores goes back a little if possible and continue after the player follows
-    Dolores: Let's talk over here. 
-    Dolores: I don't trust Bebe. Who'd bring their rabbit to a private house party? Freaky.
-    Dolores: Okay, take a deep breath now. 
-    Dolores: When was the last time you saw your keys?
-    -> Take a deep breath
-        -> *Sigh...*
-        Dolores: Good. Stay with that feeling.
-    -> I saw it in the Magician's hat last time
-        Dolores: He does like hiding things in plain sight.
-    Dolores: Sometimes what you're looking for isn't lost.
-    Dolores: Just listen to your heart. 
-    Dolores: I'm sure you'll find what you're looking for.
-    <<set $talkedToDolores = true>>
-    <<interact Dolores>>
-    //Heart poster is triggered to claim heart
+<<declare $heart = false>>
+<<if !$talkedToDolores>>
+    Dolores: ...
+    -> Wow, Dolores. You survived last night!
+    Dolores: You say. 
+    Dolores: I still feel like I'm in the wrong version of the morning.
+    Dolores: Do I look like a bird to you...?
+    -> Uhh, I don't know.
+    Dolores: Anyways, always same ... 
+    Dolores: All that aside, why do you always call me when you're high?
+        -> I didn't call you. You were here when I arrived yesterday.
+        Dolores: Are you high? Do you even listen to what I'm saying?
+        Dolores: Because I remember being called.
+        -> Can you just tell me where my keys are?
+        Dolores: Don't worry, I'll help you find your keys. Come here. 
+        //Dolores goes back a little if possible and continue after the player follows
+        Dolores: Let's talk over here. 
+        Dolores: I don't trust Bebe. Who'd bring their rabbit to a private house party? Freaky.
+        Dolores: Okay, take a deep breath now. 
+        Dolores: When was the last time you saw your keys?
+        -> Take a deep breath
+            -> *Sigh...*
+            Dolores: Good. Stay with that feeling.
+        -> I saw it in the Magician's hat last time
+            Dolores: He does like hiding things in plain sight. 
+        Dolores: Sometimes what you're looking for isn't lost.
+        Dolores: Just listen to your heart. 
+        Dolores: I'm sure you'll find what you're looking for.
+        <<set $talkedToDolores = true>>
+        //Heart poster is triggered to claim heart
+<<elseif !$heart>>
+    Dolores: Have you seen Bebe?
+    Dolores: ...I miss her, actually.
+    Dolores: Didn't know what I'd say if I found her.
+    Dolores: Still don't.
+<<else>>
+    <<once>>
+        Dolores: ...
+        Dolores: It's strange.
+        Dolores: You can feel closer to someone than you've ever been...
+        Dolores: and still not know where to stand.
+    <<else>>
+        Dolores: He watches Bebe when he thinks no one notices.
+        Dolores: ...
+    <<endonce>>
+<<endif>>
  ===
-
-title: DoloresVar1
----
-Dolores: Have you seen Bebe?
-Dolores: ...I miss her, actually.
-Dolores: Didn't know what I'd say if I found her.
-Dolores: Still don't.
-
-title: DoloresVar2
----
-Dolores: ...
-Dolores: It's strange.
-Dolores: You can feel closer to someone than you've ever been...
-Dolores: and still not know where to stand.
-===
-
-title: DoloresVar3
----
-Dolores: He watches Bebe when he thinks no one notices.
-Dolores: ...
-===
 
     
    

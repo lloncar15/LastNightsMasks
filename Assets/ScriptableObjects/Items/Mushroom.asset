@@ -15,3 +15,4 @@ MonoBehaviour:
   itemName: Mushroom
   itemText: Wanna do shrooms???
   itemId: 2
+  yarnId: $shroom

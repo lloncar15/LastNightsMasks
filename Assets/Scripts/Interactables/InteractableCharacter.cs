@@ -67,8 +67,10 @@ namespace LastNightsMasks.Interactable {
 
         [YarnCommand("interact")]
         public void YarnInteractEnded() {
+            /*
             HasAlreadyBeenInteracted =  true;
-            IsBeingLookedAt = false;
+            IsBeingLookedAt = false;*/
+            // Commented out to check the behaviour
         }
     }
 }
