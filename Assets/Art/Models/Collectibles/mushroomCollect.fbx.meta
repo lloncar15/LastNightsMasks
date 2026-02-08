@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mushroomdots
-    second: {fileID: 2100000, guid: c997eb8cbbcfd3a48828069eb00c3897, type: 2}
+    second: {fileID: 2100000, guid: 851c5a12adebcc0409c13d94fc71a331, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
