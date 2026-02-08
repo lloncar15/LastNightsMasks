@@ -21,7 +21,7 @@ Bebe: Have you seen my rabbit?
         Bebe: That was rare last night.
     -> Look closer
         Bebe: ...I am.
-        Bebe: You'd be surprised what you see when you stop looking directly at it.
+        Bebe: You see more when you stop staring.
 //Bebe walks away
 <<set $talkedToBebe = true>>
 <<interact Bebe>>
@@ -32,8 +32,8 @@ Bebe: Have you seen my rabbit?
 title: BebeVar1
 ---
 Bebe: Everything was fine...
-Bebe: Until Ghosty brought out the veggies.
-Bebe: After that, people started saying what they meant sideways.
+Bebe: Then Ghosty brought out the veggies.
+Bebe: After that, people shifted from editing themselves.
 ===
 
 title: BebeVar2
@@ -48,7 +48,7 @@ position: 95,3
 ---
 <<declare $talkedToMagician = false>>
 Magician: Urgh... my head.
-Magician: Last night's party... was alot.
+Magician: Last night was... a lot.
 -> Yeah, it was something. Have you seen my keys?
     Magician: Keys?
     Magician: What do you mean keys?
@@ -73,7 +73,7 @@ Magician: Last night's party... was alot.
 title: MagicianVar1
 ---
 Magician: I invited Dolores last night.
-Magician: Thought it might help something settle between me and Bebe.
+Magician: Thought it might help something settle...
 Magician: Guess I just moved things around instead.
 ===
 
@@ -90,7 +90,8 @@ position: -240,3
 Ghosty: Ohhh... I feel so alive today.
 Ghosty: Mornings after parties always feel brighter.
 -> You look good. What's your secret?
-    Ghosty: I eat a lot of veggies. Like A LOT.
+    Ghosty: I eat a lot of veggies. 
+    Ghosty: Like A LOT.
      -> Sounds trippy.
      Ghosty: You should try it sometime.
      <<set $talkedToGhosty = true>>
@@ -110,8 +111,8 @@ Ghosty: Not my fault if the truth shows up early.
 
 title: GhostyVar2
 ---
-Ghosty: People think parties are only about music.
-Ghosty: I think they're really about permission.
+Ghosty: People think parties are about music.
+Ghosty: I think they're about permission.
 ===
 
 title: Dolores
@@ -122,7 +123,7 @@ Dolores: ...
 -> Wow, Dolores. You survived last night!
 Dolores: You say. 
 Dolores: I still feel like I'm in the wrong version of the morning.
-Dolores: Do I look like a bird to you?..
+Dolores: Do I look like a bird to you...?
 -> Uhh, I don't know.
 Dolores: Anyways, always same ... 
 Dolores: All that aside, why do you always call me when you're high?
@@ -154,10 +155,22 @@ title: DoloresVar1
 Dolores: Have you seen Bebe?
 Dolores: ...I miss her, actually.
 Dolores: Didn't know what I'd say if I found her.
-Dolores: And I still don't.
+Dolores: Still don't.
+
+title: DoloresVar2
+---
+Dolores: ...
+Dolores: It's strange.
+Dolores: You can feel closer to someone than you've ever been...
+Dolores: and still not know where to stand.
 ===
 
-    
+title: DoloresVar3
+---
+Dolores: He watches Bebe when he thinks no one notices.
+Dolores: ...
+===
+
     
    
 
