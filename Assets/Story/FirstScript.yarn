@@ -82,6 +82,9 @@ position: -240,3
 <<if !$talkedToGhosty>>
     Ghosty: Ohhh... I feel so alive today.
     Ghosty: Mornings after parties always feel brighter.
+    -> I need to go home. Have you seen my keys?
+        Ghosty: Do I look like a lost-and-found?
+        Ghosty: Happens every time I host.
     -> You look good. What's your secret?
         Ghosty: I eat a lot of veggies. 
         Ghosty: Like A LOT.
@@ -89,9 +92,6 @@ position: -240,3
         Ghosty: You should try it sometime.
         <<set $talkedToGhosty = true>>
         //Mushroom chair is triggered to claim mushroom
-    -> I need to go home. Have you seen my keys?
-        Ghosty: Do I look like a lost-and-found?
-        Ghosty: Happens every time I host.
 <<elseif !$shroom>>
     Ghosty: I love hosting.
     Ghosty: People relax... forget their lines.

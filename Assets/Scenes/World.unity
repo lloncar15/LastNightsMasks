@@ -10207,6 +10207,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.48
       objectReference: {fileID: 0}
+    - target: {fileID: 9005563761453878307, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
+      propertyPath: volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005563761453878307, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
+      propertyPath: pitchRange.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005563761453878307, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
+      propertyPath: pitchRange.y
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
