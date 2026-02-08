@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace LastNightsMasks.Utils {
     public class PersistentSingleton<T> : MonoBehaviour where T : Component {
-        private static T _instance;
+        protected static T _instance;
         public static bool HasInstance =>  _instance != null;
 
         public static T Instance {
