@@ -144,7 +144,7 @@ position: 146,-221
 <<else>>
     <<once>>
         Dolores: ...
-        Dolores: It's strange.
+        Dolores: It's odd.
         Dolores: You can feel closer to someone than you've ever been...
         Dolores: and still not know where to stand.
     <<else>>
