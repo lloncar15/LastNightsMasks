@@ -2,7 +2,6 @@
 position: -17,193
 ---
 <<declare $talkedToBebe = false>>
-//Bebe comes to the player every 3 mins, and asks this question
 Bebe: Have you seen my rabbit?
 -> Yes
     Bebe: Are you playing with me?
@@ -12,23 +11,43 @@ Bebe: Have you seen my rabbit?
     Bebe: Can you find me if you'd see my rabbit?
     -> Okay
         Bebe: Thanks.
+        Bebe: My rabbit listens better than most people here.
     -> Maybe
         Bebe: Figures.
+        Bebe: Last night had a lot of maybes.
     -> No
         Bebe: Right.
+        Bebe: Pretty honest.
+        Bebe: That was rare last night.
     -> Look closer
         Bebe: ...I am.
+        Bebe: You'd be surprised what you see when you stop looking directly at it.
 //Bebe walks away
 <<set $talkedToBebe = true>>
 <<interact Bebe>>
 // <<playsound "Have you seen my rabbit">>
 ===
 
+//Variation 1 - Available after the collectible is unlocked
+title: BebeVar1
+---
+Bebe: Everything was fine...
+Bebe: Until Ghosty brought out the veggies.
+Bebe: After that, people started saying what they meant sideways.
+===
+
+title: BebeVar2
+---
+Bebe: Strange, isn't it?
+Bebe: People think they hide things...
+Bebe: but they mostly hide from themselves.
+===
+
 title: Magician
 position: 95,3
 ---
 <<declare $talkedToMagician = false>>
-Magician: Urgh… my head.
+Magician: Urgh... my head.
 Magician: Last night's party... was mad.
 -> Yeah, it was something. Have you seen my keys?
     Magician: Keys?
@@ -36,10 +55,12 @@ Magician: Last night's party... was mad.
     -> You know keys... to open doors?
         Magician: Hmm.
         Magician: I'm not sure.
+        Magician: Doors are overrated anyway.
         Magician: But...
         Magician: Do you want to play a game?
         -> Yes
             Magician: Go on, look under the bed. I left a surprise for you.
+            Magician: I tend to hide things when I don't know what to do with them, I guess.
             <<set $talkedToMagician = true>>
             <<interact Magician>>
         //Bed is triggered to claim magician hat
@@ -48,11 +69,25 @@ Magician: Last night's party... was mad.
         //Magician walks away
 ===
 
+title: MagicianVar1
+---
+Magician: I invited Dolores last night.
+Magician: Thought it might help something settle between me and Bebe.
+Magician: Guess I just moved things around instead.
+===
+
+title: MagicianVar2
+---
+Magician: Funny thing about parties...
+Magician: People show up for one reason and leave because of another.
+===
+
 title: Ghosty
 position: -240,3
 ---
 <<declare $talkedToGhosty = false>>
 Ghosty: Ohhh... I feel so alive today.
+Ghosty: Mornings after parties always feel brighter.
 -> You look good. What's your secret?
     Ghosty: I eat a lot of veggies. Like A LOT.
      -> Sounds trippy.
@@ -62,6 +97,20 @@ Ghosty: Ohhh... I feel so alive today.
      //Mushroom chair is triggered to claim mushroom
 -> I need to go home. Have you seen my keys?
     Ghosty: Do I look like a lost-and-found?
+    Ghosty: Happens every time I host.
+===
+
+title: GhostyVar1
+---
+Ghosty: I love hosting.
+Ghosty: People relax... forget their lines.
+Ghosty: Not my fault if the truth shows up early.
+===
+
+title: GhostyVar2
+---
+Ghosty: People think parties are only about music.
+Ghosty: I think they're really about permission.
 ===
 
 title: Dolores
@@ -70,12 +119,15 @@ position: 146,-221
 <<declare $talkedToDolores = false>>
 Dolores: ...
 -> Wow, Dolores. You survived last night!
-Dolores: You say. Do I look like a bird to you?..
+Dolores: You say. 
+Dolores: I still feel like I'm in the wrong version of the morning.
+Dolores: Do I look like a bird to you?..
 -> Uhh, I don't know.
-Dolores: Anyway, always same ... 
+Dolores: Anyways, always same ... 
 Dolores: All that aside, why do you always call me when you're high?
     -> I didn't call you. You were here when I arrived yesterday.
     Dolores: Are you high? Do you even listen to what I'm saying?
+    Dolores: Because I remember being called.
     -> Can you just tell me where my keys are?
     Dolores: Don't worry, I'll help you find your keys. Come here. 
     //Dolores goes back a little if possible and continue after the player follows
@@ -84,8 +136,10 @@ Dolores: All that aside, why do you always call me when you're high?
     Dolores: Okay, take a deep breath now. 
     Dolores: When was the last time you saw your keys?
     -> Take a deep breath
-        -> *Sigh…*
-    -> I saw it in the magician's hat last time
+        -> *Sigh...*
+        Dolores: Good. Stay with that feeling.
+    -> I saw it in the Magician's hat last time
+        Dolores: He does like hiding things in plain sight.
     Dolores: Sometimes what you're looking for isn't lost.
     Dolores: Just listen to your heart. 
     Dolores: I'm sure you'll find what you're looking for.
@@ -94,7 +148,13 @@ Dolores: All that aside, why do you always call me when you're high?
     //Heart poster is triggered to claim heart
  ===
 
-
+title: DoloresVar1
+---
+Dolores: Have you seen Bebe?
+Dolores: ...I miss her, actually.
+Dolores: Didn't know what I'd say if I found her.
+Dolores: And I still don't.
+===
 
     
     
