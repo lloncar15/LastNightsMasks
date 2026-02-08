@@ -53,6 +53,7 @@ MonoBehaviour:
   sfxVolume: 1
   backgroundMusic: {fileID: 8300000, guid: 264217d240120445ea37b9227f8f5fbe, type: 3}
   seen: {fileID: 8300000, guid: 5bd9a1780d56d44d18dc2f724415e663, type: 3}
+  menuSound: {fileID: 8300000, guid: d504e910ecd604c78aae9643ad0e29f8, type: 3}
 --- !u!82 &5930933037376187481
 AudioSource:
   m_ObjectHideFlags: 0

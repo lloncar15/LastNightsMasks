@@ -16,6 +16,7 @@ namespace LastNightsMasks.Sound {
         [Header("Background Music")] 
         [SerializeField] private AudioClip backgroundMusic;
         [SerializeField] public AudioClip seen;
+        [SerializeField] public AudioClip menuSound;
         
         private void Start() {
             if (musicSource == null) 
@@ -40,6 +41,10 @@ namespace LastNightsMasks.Sound {
                 return;
 
             musicSource.Stop();
+        }
+
+        public void PlayMenuSound() {
+            PlaySound(menuSound);
         }
         
         public void PlaySound(AudioSource source, AudioClip clip) {

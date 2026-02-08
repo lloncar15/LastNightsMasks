@@ -213,6 +213,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1932515513}
+        m_TargetAssemblyTypeName: LastNightsMasks.Sound.SoundController, com.lastnightsmasks.sound
+        m_MethodName: PlayMenuSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &141292846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,6 +993,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1932515513}
+        m_TargetAssemblyTypeName: LastNightsMasks.Sound.SoundController, com.lastnightsmasks.sound
+        m_MethodName: PlayMenuSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &672548155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1525,6 +1549,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1932515513}
+        m_TargetAssemblyTypeName: LastNightsMasks.Sound.SoundController, com.lastnightsmasks.sound
+        m_MethodName: PlayMenuSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1479855180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,6 +1843,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1932515513}
+        m_TargetAssemblyTypeName: LastNightsMasks.Sound.SoundController, com.lastnightsmasks.sound
+        m_MethodName: PlayMenuSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1616396796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2026,6 +2074,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1932515513}
+        m_TargetAssemblyTypeName: LastNightsMasks.Sound.SoundController, com.lastnightsmasks.sound
+        m_MethodName: PlayMenuSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1781276648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2121,6 +2181,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4440272baed846f084b2f7b7bae7011, type: 3}
+--- !u!114 &1932515513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6922636844909448182, guid: d4440272baed846f084b2f7b7bae7011, type: 3}
+  m_PrefabInstance: {fileID: 1932515512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47b40000b0841d0b7a18cf084e2a589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: com.lastnightsmasks.player::LastNightsMasks.Player.SoundController
 --- !u!1 &2066635685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,6 +2290,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1932515513}
+        m_TargetAssemblyTypeName: LastNightsMasks.Sound.SoundController, com.lastnightsmasks.sound
+        m_MethodName: PlayMenuSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
