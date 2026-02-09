@@ -13,7 +13,7 @@ namespace LastNightsMasks.Items {
         private readonly HashSet<int> _collectedItemIds = new();
         private readonly List<ItemData> _collectedItems = new();
         
-        [SerializeField] private InMemoryVariableStorage _storage;
+        private InMemoryVariableStorage _storage;
 
         public IReadOnlyList<ItemData> CollectedItems => _collectedItems;
 

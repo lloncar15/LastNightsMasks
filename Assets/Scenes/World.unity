@@ -310,11 +310,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b232aac634d8a134eaa8da65ec8add87, type: 3}
   m_PrefabInstance: {fileID: 11316538}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &19599004 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3459519610314289967, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
-  m_PrefabInstance: {fileID: 1844985507741888833}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &31060617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6154,6 +6149,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4978781882522826361, guid: a97717666d349d349bb3b6104807c745, type: 3}
   m_PrefabInstance: {fileID: 1460018941}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1461039020 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7738747753848868945, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
+  m_PrefabInstance: {fileID: 1844985507741888833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1475560072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10198,7 +10198,11 @@ PrefabInstance:
     - target: {fileID: 7431163287414695594, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
       propertyPath: playerRenderer
       value: 
-      objectReference: {fileID: 19599004}
+      objectReference: {fileID: 1461039020}
+    - target: {fileID: 7738747753848868945, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
+      propertyPath: m_CastShadows
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8055073818046895616, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
       propertyPath: inputController
       value: 
@@ -10209,7 +10213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005563761453878307, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
       propertyPath: volume
-      value: 0.1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 9005563761453878307, guid: bbdc9f9ec27114e77a4632161d92924b, type: 3}
       propertyPath: pitchRange.x
