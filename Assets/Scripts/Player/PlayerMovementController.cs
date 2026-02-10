@@ -9,6 +9,9 @@ namespace LastNightsMasks.Player {
         [SerializeField] private Transform cameraHolder;
         [SerializeField] private PlayerConfig playerConfig;
         
+        [Header("Looking")]
+        [SerializeField] private float lookingSpeed = 0.8f;
+        
         [Header("Footsteps")]
         [SerializeField] private AudioSource footstepsSource;
         [SerializeField] private AudioClip[] footstepsClips;
@@ -35,7 +38,7 @@ namespace LastNightsMasks.Player {
         }
 
         private void HandleLook() {
-            Vector2 lookInput = InputController.Instance.LookInput;
+            Vector2 lookInput = InputController.Instance.LookInput * lookingSpeed;
             
             transform.Rotate(Vector3.up, lookInput.x * playerConfig.lookSensitivity);
             

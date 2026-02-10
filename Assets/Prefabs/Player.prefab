@@ -412,6 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: com.lastnightsmasks.player::LastNightsMasks.Player.PlayerMovementController
   cameraHolder: {fileID: 8401254500365245250}
   playerConfig: {fileID: 11400000, guid: e04ca3e1bb29c4d179593860b34a9fe2, type: 2}
+  lookingSpeed: 0.7
   footstepsSource: {fileID: 8637284758349138855}
   footstepsClips:
   - {fileID: 8300000, guid: 8dfb7dcb19a40456b91cc409384437db, type: 3}
