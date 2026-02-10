@@ -43,7 +43,7 @@ namespace LastNightsMasks.Player {
         private void OnDisable() {
             InteractableObject.InteractedWithObject -= InteractedWithObject;
             InteractableObject.FinishedInteractingWithObject -= FinishedInteractingWithObject;
-            InteractableItemSpawner.LookAtItem += LookAt;
+            InteractableItemSpawner.LookAtItem -= LookAt;
         }
 
         private void InteractedWithObject(Transform trans) {
